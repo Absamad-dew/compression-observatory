@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" role="img" aria-label="Actual synthetic compression benchmark summary">
+<rect width="1100" height="100%" rx="24" fill="#f3f1eb"/>
+<g font-family="Arial, sans-serif" fill="#192d35">
+<text x="48" y="55" font-size="15" letter-spacing="3" fill="#007f79">STDLIB CODECS · BYTE-VERIFIED</text>
+<text x="48" y="112" font-size="44" font-weight="700">Compression Observatory</text>
+<text x="48" y="150" font-size="18">Public synthetic corpus · 951,109 input bytes · 5 measured repeats</text>
+<text x="48" y="206" font-size="15" fill="#48616a">CODEC / LEVEL</text>
+<text x="330" y="206" font-size="15" fill="#48616a">OUTPUT BYTES</text>
+<text x="570" y="206" font-size="15" fill="#48616a">RATIO</text>
+<text x="730" y="206" font-size="15" fill="#48616a">ENCODE ms</text>
+<text x="910" y="206" font-size="15" fill="#48616a">DECODE ms</text>
+<rect x="32" y="222" width="1036" height="48" rx="10" fill="white"/>
+<text x="48" y="253" font-size="21" font-weight="600">gzip:1</text>
+<text x="330" y="253" font-size="21">234,217</text>
+<text x="570" y="253" font-size="21">0.2463</text>
+<text x="730" y="253" font-size="21">5.740</text>
+<text x="910" y="253" font-size="21">1.444</text>
+<rect x="32" y="280" width="1036" height="48" rx="10" fill="white"/>
+<text x="48" y="311" font-size="21" font-weight="600">gzip:6</text>
+<text x="330" y="311" font-size="21">198,911</text>
+<text x="570" y="311" font-size="21">0.2091</text>
+<text x="730" y="311" font-size="21">13.562</text>
+<text x="910" y="311" font-size="21">1.188</text>
+<rect x="32" y="338" width="1036" height="48" rx="10" fill="white"/>
+<text x="48" y="369" font-size="21" font-weight="600">zlib:6</text>
+<text x="330" y="369" font-size="21">198,827</text>
+<text x="570" y="369" font-size="21">0.2090</text>
+<text x="730" y="369" font-size="21">13.493</text>
+<text x="910" y="369" font-size="21">1.149</text>
+<rect x="32" y="396" width="1036" height="48" rx="10" fill="white"/>
+<text x="48" y="427" font-size="21" font-weight="600">bz2:9</text>
+<text x="330" y="427" font-size="21">174,755</text>
+<text x="570" y="427" font-size="21">0.1837</text>
+<text x="730" y="427" font-size="21">61.338</text>
+<text x="910" y="427" font-size="21">10.658</text>
+<rect x="32" y="454" width="1036" height="48" rx="10" fill="white"/>
+<text x="48" y="485" font-size="21" font-weight="600">lzma:6</text>
+<text x="330" y="485" font-size="21">183,716</text>
+<text x="570" y="485" font-size="21">0.1932</text>
+<text x="730" y="485" font-size="21">149.189</text>
+<text x="910" y="485" font-size="21">3.669</text>
+<text x="48" y="564" font-size="15" fill="#48616a">Measured example, not a general ranking · Raw repeats and source fingerprints in examples/run.json</text>
+</g></svg>

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "timestampUnixMs": 1793708803463,
+  "project": "github-portfolio",
+  "command": [".venv\\Scripts\\compression-observatory.exe", "bench", "corpus-final", "--codecs", "gzip:1,gzip:6,zlib:6,bz2:9,lzma:6", "--warmups", "1", "--repeats", "5", "--json", "examples/run.json", "--html", "examples/report.html"],
+  "leaseId": "5e22eb2e-e1bf-47ff-807b-e9f5d607e800",
+  "physicalCores": [16, 18, 20, 22, 24, 26, 28, 30],
+  "logicalCpus": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+  "l3Indices": [16],
+  "exclusive": false,
+  "warmups": 1,
+  "runs": 3,
+  "durationsMs": [1783.4352, 1804.999, 1828.152],
+  "medianMs": 1804.999,
+  "p95Ms": 1828.152,
+  "coefficientOfVariationPct": 1.0113048503401727,
+  "exitCode": 0,
+  "onAcPower": true,
+  "powerProfile": null
+}

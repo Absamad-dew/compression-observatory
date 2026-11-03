@@ -1,0 +1,43 @@
+{
+  "kind": "public-synthetic",
+  "generator": "compression-observatory/corpus-v1",
+  "seed": 1729,
+  "records": 2000,
+  "files": [
+    {
+      "path": "empty.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "events.jsonl",
+      "bytes": 183632,
+      "sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30"
+    },
+    {
+      "path": "noise.bin",
+      "bytes": 128000,
+      "sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf"
+    },
+    {
+      "path": "prose.txt",
+      "bytes": 331880,
+      "sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e"
+    },
+    {
+      "path": "repeated.txt",
+      "bytes": 72000,
+      "sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553"
+    },
+    {
+      "path": "service.log",
+      "bytes": 107597,
+      "sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b"
+    },
+    {
+      "path": "unicode.txt",
+      "bytes": 128000,
+      "sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8"
+    }
+  ]
+}

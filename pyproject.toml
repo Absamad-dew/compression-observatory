@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compression-observatory"
+version = "0.1.0"
+description = "Reproducible, byte-verified stdlib lossless compression experiments"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Absamad-dew"}]
+dependencies = []
+
+[project.scripts]
+compression-observatory = "compression_observatory.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

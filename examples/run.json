@@ -1,0 +1,2002 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "name": "compression-observatory",
+    "version": "0.1.0",
+    "source_revision": null,
+    "source_files": [
+      {
+        "path": "src/compression_observatory/__init__.py",
+        "sha256": "ad8baafb7608bad37b1a769e656b67fbaabd4d5abfb4c74d595b1a26440e54b4"
+      },
+      {
+        "path": "src/compression_observatory/__main__.py",
+        "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+      },
+      {
+        "path": "src/compression_observatory/benchmark.py",
+        "sha256": "1574449689bfca007636844c4cc95a3dc3d5b57edf80dfee503cf287ebe19438"
+      },
+      {
+        "path": "src/compression_observatory/cli.py",
+        "sha256": "6538648d71a9f67d10fb24ad06f2319c0b315b9b7f43b9198f65687800805887"
+      },
+      {
+        "path": "src/compression_observatory/corpus.py",
+        "sha256": "1896d93b744693c92e60141051c49360f88fb1beb2c86d24f841504fce8e820c"
+      },
+      {
+        "path": "src/compression_observatory/report.py",
+        "sha256": "4327edaba0ee0c8fad186234de94bcecf478c7d7f068a92bad09691ea8c2280c"
+      }
+    ]
+  },
+  "created_utc": "2026-11-03T12:26:43.382291+00:00",
+  "environment": {
+    "python": "3.13.15",
+    "implementation": "CPython",
+    "os": "Windows",
+    "machine": "AMD64",
+    "zlib_runtime": "1.3.1"
+  },
+  "method": {
+    "warmups_per_file_codec": 1,
+    "measured_repeats": 5,
+    "clock": "time.perf_counter_ns",
+    "timer_resolution_seconds": 1e-07,
+    "timed": "in-memory encode/decode calls only; validation, hashing, file I/O excluded",
+    "ordering": "serial codec-major, file-major, warmups then repetitions",
+    "aggregation": "sum bytes; median of per-repeat sums of file times",
+    "framing": "one independently compressed stream per file; includes stream headers",
+    "gzip_mtime": 0,
+    "lzma_format": "XZ",
+    "memory_measured": false
+  },
+  "corpus": {
+    "kind": "manifest-verified",
+    "declared_kind": "public-synthetic",
+    "manifest_sha256": "8ce1c108db44702258cf31d74c29fbe6cf4164341b376edf8e7d7a301416b20c",
+    "manifest": {
+      "kind": "public-synthetic",
+      "generator": "compression-observatory/corpus-v1",
+      "seed": 1729,
+      "records": 2000,
+      "files": [
+        {
+          "path": "empty.bin",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "events.jsonl",
+          "bytes": 183632,
+          "sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30"
+        },
+        {
+          "path": "noise.bin",
+          "bytes": 128000,
+          "sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf"
+        },
+        {
+          "path": "prose.txt",
+          "bytes": 331880,
+          "sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e"
+        },
+        {
+          "path": "repeated.txt",
+          "bytes": 72000,
+          "sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553"
+        },
+        {
+          "path": "service.log",
+          "bytes": 107597,
+          "sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b"
+        },
+        {
+          "path": "unicode.txt",
+          "bytes": 128000,
+          "sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8"
+        }
+      ]
+    },
+    "file_count": 7,
+    "input_bytes": 951109
+  },
+  "results": [
+    {
+      "codec": "gzip:1",
+      "files": [
+        {
+          "path": "empty.bin",
+          "input_bytes": 0,
+          "output_bytes": 20,
+          "ratio": null,
+          "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_sha256": "458c5a203299dd326aa747fee1bbc7709bfbd560507d1603459d9f7d9eb6be76",
+          "decoded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 4700,
+              "decode_ns": 5900
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 3000,
+              "decode_ns": 3300
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2500,
+              "decode_ns": 2300
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2500,
+              "decode_ns": 2000
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2300,
+              "decode_ns": 1700
+            }
+          ],
+          "encode": {
+            "median_ns": 2500,
+            "p95_ns": 4700,
+            "cv": 0.2936362072739366
+          },
+          "decode": {
+            "median_ns": 2300,
+            "p95_ns": 5900,
+            "cv": 0.5025902435469547
+          }
+        },
+        {
+          "path": "events.jsonl",
+          "input_bytes": 183632,
+          "output_bytes": 31620,
+          "ratio": 0.17219221050797245,
+          "input_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "output_sha256": "57ae31d1260f90863b7a7088afaf53835061032db6ed432ec7ad5cb34464abee",
+          "decoded_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 735400,
+              "decode_ns": 297100
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 791500,
+              "decode_ns": 270300
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 762600,
+              "decode_ns": 286400
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 792900,
+              "decode_ns": 270200
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 758700,
+              "decode_ns": 264100
+            }
+          ],
+          "encode": {
+            "median_ns": 762600,
+            "p95_ns": 792900,
+            "cv": 0.028222979765669075
+          },
+          "decode": {
+            "median_ns": 270300,
+            "p95_ns": 297100,
+            "cv": 0.0440566593554211
+          }
+        },
+        {
+          "path": "noise.bin",
+          "input_bytes": 128000,
+          "output_bytes": 128058,
+          "ratio": 1.000453125,
+          "input_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "output_sha256": "d3ad55e44dc1d1191c7c0418b0acdde45c5caff5f1c537576c9e5fa104677652",
+          "decoded_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2464700,
+              "decode_ns": 157500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2392400,
+              "decode_ns": 153700
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2467200,
+              "decode_ns": 180600
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2475500,
+              "decode_ns": 159800
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2401500,
+              "decode_ns": 156200
+            }
+          ],
+          "encode": {
+            "median_ns": 2464700,
+            "p95_ns": 2475500,
+            "cv": 0.014612822321684309
+          },
+          "decode": {
+            "median_ns": 157500,
+            "p95_ns": 180600,
+            "cv": 0.06017741465105922
+          }
+        },
+        {
+          "path": "prose.txt",
+          "input_bytes": 331880,
+          "output_bytes": 55891,
+          "ratio": 0.1684072556345667,
+          "input_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "output_sha256": "50ef44ead8667b7f63939a1a6f801db574acc5701913cc045f737a9ba381ce6b",
+          "decoded_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 1821400,
+              "decode_ns": 662000
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 1874300,
+              "decode_ns": 694900
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 1915900,
+              "decode_ns": 659900
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 1883900,
+              "decode_ns": 688500
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 1863600,
+              "decode_ns": 656700
+            }
+          ],
+          "encode": {
+            "median_ns": 1874300,
+            "p95_ns": 1915900,
+            "cv": 0.016387950224720223
+          },
+          "decode": {
+            "median_ns": 662000,
+            "p95_ns": 694900,
+            "cv": 0.02376150178931255
+          }
+        },
+        {
+          "path": "repeated.txt",
+          "input_bytes": 72000,
+          "output_bytes": 461,
+          "ratio": 0.006402777777777778,
+          "input_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "output_sha256": "7ee70e8b02ddc960ebebad473e2e6cc8e69658df73fb6de176ab84f7fb5d84c0",
+          "decoded_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 116700,
+              "decode_ns": 88600
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 120900,
+              "decode_ns": 79100
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 117400,
+              "decode_ns": 87200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 120500,
+              "decode_ns": 78900
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 116500,
+              "decode_ns": 87900
+            }
+          ],
+          "encode": {
+            "median_ns": 117400,
+            "p95_ns": 120900,
+            "cv": 0.016096120607529185
+          },
+          "decode": {
+            "median_ns": 87200,
+            "p95_ns": 88600,
+            "cv": 0.05196783295695336
+          }
+        },
+        {
+          "path": "service.log",
+          "input_bytes": 107597,
+          "output_bytes": 17173,
+          "ratio": 0.1596048216957722,
+          "input_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "output_sha256": "3eed4d2ccbac3e7d1325e0d985369e06f7c24a2ad251dff6ede26ac6667d9db6",
+          "decoded_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 412700,
+              "decode_ns": 201200
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 387800,
+              "decode_ns": 134800
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 408400,
+              "decode_ns": 137200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 378100,
+              "decode_ns": 129800
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 396400,
+              "decode_ns": 135900
+            }
+          ],
+          "encode": {
+            "median_ns": 396400,
+            "p95_ns": 412700,
+            "cv": 0.03224709743298497
+          },
+          "decode": {
+            "median_ns": 135900,
+            "p95_ns": 201200,
+            "cv": 0.18153558904456135
+          }
+        },
+        {
+          "path": "unicode.txt",
+          "input_bytes": 128000,
+          "output_bytes": 994,
+          "ratio": 0.007765625,
+          "input_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "output_sha256": "8161f030bcaddd961f5b1bab042a191aef0118c74ca77d1d9946d5f7aab33429",
+          "decoded_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 160400,
+              "decode_ns": 125500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 169800,
+              "decode_ns": 107700
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 201300,
+              "decode_ns": 90200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 174200,
+              "decode_ns": 102200
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 200100,
+              "decode_ns": 90400
+            }
+          ],
+          "encode": {
+            "median_ns": 174200,
+            "p95_ns": 201300,
+            "cv": 0.09146569089363302
+          },
+          "decode": {
+            "median_ns": 102200,
+            "p95_ns": 125500,
+            "cv": 0.12644364956229528
+          }
+        }
+      ],
+      "aggregate": {
+        "input_bytes": 951109,
+        "output_bytes": 234217,
+        "ratio": 0.24625673818668523,
+        "verified": true,
+        "samples": [
+          {
+            "repeat": 0,
+            "encode_ns": 5716000,
+            "decode_ns": 1537800
+          },
+          {
+            "repeat": 1,
+            "encode_ns": 5739700,
+            "decode_ns": 1443800
+          },
+          {
+            "repeat": 2,
+            "encode_ns": 5875300,
+            "decode_ns": 1443800
+          },
+          {
+            "repeat": 3,
+            "encode_ns": 5827600,
+            "decode_ns": 1431400
+          },
+          {
+            "repeat": 4,
+            "encode_ns": 5739100,
+            "decode_ns": 1392900
+          }
+        ],
+        "encode": {
+          "median_ns": 5739700,
+          "p95_ns": 5875300,
+          "cv": 0.010592609162998786
+        },
+        "decode": {
+          "median_ns": 1443800,
+          "p95_ns": 1537800,
+          "cv": 0.032920492771196415
+        },
+        "pareto_size_encode": true,
+        "pareto_size_decode": false
+      }
+    },
+    {
+      "codec": "gzip:6",
+      "files": [
+        {
+          "path": "empty.bin",
+          "input_bytes": 0,
+          "output_bytes": 20,
+          "ratio": null,
+          "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+          "decoded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 3200,
+              "decode_ns": 2300
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2500,
+              "decode_ns": 1800
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2400,
+              "decode_ns": 1700
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2200,
+              "decode_ns": 1600
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2300,
+              "decode_ns": 1600
+            }
+          ],
+          "encode": {
+            "median_ns": 2400,
+            "p95_ns": 3200,
+            "cv": 0.14063527894182024
+          },
+          "decode": {
+            "median_ns": 1700,
+            "p95_ns": 2300,
+            "cv": 0.14487116456005886
+          }
+        },
+        {
+          "path": "events.jsonl",
+          "input_bytes": 183632,
+          "output_bytes": 21133,
+          "ratio": 0.11508342772501524,
+          "input_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "output_sha256": "f1b8b5b02cb9f6c8ba274e4198a67c0d887a523593a3c0f6be8dde79ee58562a",
+          "decoded_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2339400,
+              "decode_ns": 251500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2546500,
+              "decode_ns": 270000
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2449700,
+              "decode_ns": 233300
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2465800,
+              "decode_ns": 247600
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2491200,
+              "decode_ns": 245800
+            }
+          ],
+          "encode": {
+            "median_ns": 2465800,
+            "p95_ns": 2546500,
+            "cv": 0.027664196798847303
+          },
+          "decode": {
+            "median_ns": 247600,
+            "p95_ns": 270000,
+            "cv": 0.047528470496030185
+          }
+        },
+        {
+          "path": "noise.bin",
+          "input_bytes": 128000,
+          "output_bytes": 128058,
+          "ratio": 1.000453125,
+          "input_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "output_sha256": "14c5edfe79db31f6226a0acd106e2f2d943e1f21db2e3891d7d5ffc051f1fb0d",
+          "decoded_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2634400,
+              "decode_ns": 265000
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2432300,
+              "decode_ns": 155400
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2497200,
+              "decode_ns": 161200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2461800,
+              "decode_ns": 153800
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2494000,
+              "decode_ns": 157300
+            }
+          ],
+          "encode": {
+            "median_ns": 2494000,
+            "p95_ns": 2634400,
+            "cv": 0.027710743444955672
+          },
+          "decode": {
+            "median_ns": 157300,
+            "p95_ns": 265000,
+            "cv": 0.2425255556124296
+          }
+        },
+        {
+          "path": "prose.txt",
+          "input_bytes": 331880,
+          "output_bytes": 35656,
+          "ratio": 0.10743642280342293,
+          "input_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "output_sha256": "55a514f7827d7166d0ff7f20c1d460f32ded95de7f12500662073d71aaf8b493",
+          "decoded_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 6731000,
+              "decode_ns": 494000
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 6773300,
+              "decode_ns": 486400
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 6754500,
+              "decode_ns": 456200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 6760600,
+              "decode_ns": 463100
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 6775500,
+              "decode_ns": 462600
+            }
+          ],
+          "encode": {
+            "median_ns": 6760600,
+            "p95_ns": 6775500,
+            "cv": 0.00237049963969094
+          },
+          "decode": {
+            "median_ns": 463100,
+            "p95_ns": 494000,
+            "cv": 0.031500987798957984
+          }
+        },
+        {
+          "path": "repeated.txt",
+          "input_bytes": 72000,
+          "output_bytes": 281,
+          "ratio": 0.0039027777777777776,
+          "input_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "output_sha256": "c395a6b2a185beccc4d1f510a88fc75e430558e3149c659a66f28318acd81b44",
+          "decoded_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 248700,
+              "decode_ns": 94500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 255200,
+              "decode_ns": 80600
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 249800,
+              "decode_ns": 93200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 252000,
+              "decode_ns": 83300
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 254700,
+              "decode_ns": 91800
+            }
+          ],
+          "encode": {
+            "median_ns": 252000,
+            "p95_ns": 255200,
+            "cv": 0.010226539698004206
+          },
+          "decode": {
+            "median_ns": 91800,
+            "p95_ns": 94500,
+            "cv": 0.06344331546142924
+          }
+        },
+        {
+          "path": "service.log",
+          "input_bytes": 107597,
+          "output_bytes": 13281,
+          "ratio": 0.1234328094649479,
+          "input_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "output_sha256": "f5c6bae040c42c093acf1e65c750a9cde7742859f5e367724a47b70e0228f072",
+          "decoded_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 1146000,
+              "decode_ns": 200900
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 1164700,
+              "decode_ns": 133800
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 1145700,
+              "decode_ns": 141700
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 1135300,
+              "decode_ns": 132300
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 1145800,
+              "decode_ns": 140300
+            }
+          ],
+          "encode": {
+            "median_ns": 1145800,
+            "p95_ns": 1164700,
+            "cv": 0.00829545408661514
+          },
+          "decode": {
+            "median_ns": 140300,
+            "p95_ns": 200900,
+            "cv": 0.17225861628918
+          }
+        },
+        {
+          "path": "unicode.txt",
+          "input_bytes": 128000,
+          "output_bytes": 482,
+          "ratio": 0.003765625,
+          "input_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "output_sha256": "af6cc1700a36b5df870820583b0c627086b3621ea080048eb388c407b1281fd6",
+          "decoded_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 408000,
+              "decode_ns": 136500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 387200,
+              "decode_ns": 101100
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 615600,
+              "decode_ns": 97200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 395000,
+              "decode_ns": 97100
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 431200,
+              "decode_ns": 89000
+            }
+          ],
+          "encode": {
+            "median_ns": 408000,
+            "p95_ns": 615600,
+            "cv": 0.1909069191577506
+          },
+          "decode": {
+            "median_ns": 97200,
+            "p95_ns": 136500,
+            "cv": 0.15966008935939954
+          }
+        }
+      ],
+      "aggregate": {
+        "input_bytes": 951109,
+        "output_bytes": 198911,
+        "ratio": 0.20913586139969237,
+        "verified": true,
+        "samples": [
+          {
+            "repeat": 0,
+            "encode_ns": 13510700,
+            "decode_ns": 1444700
+          },
+          {
+            "repeat": 1,
+            "encode_ns": 13561700,
+            "decode_ns": 1229100
+          },
+          {
+            "repeat": 2,
+            "encode_ns": 13714900,
+            "decode_ns": 1184500
+          },
+          {
+            "repeat": 3,
+            "encode_ns": 13472700,
+            "decode_ns": 1178800
+          },
+          {
+            "repeat": 4,
+            "encode_ns": 13594700,
+            "decode_ns": 1188400
+          }
+        ],
+        "encode": {
+          "median_ns": 13561700,
+          "p95_ns": 13714900,
+          "cv": 0.006134567629708099
+        },
+        "decode": {
+          "median_ns": 1188400,
+          "p95_ns": 1444700,
+          "cv": 0.08141492196978986
+        },
+        "pareto_size_encode": false,
+        "pareto_size_decode": false
+      }
+    },
+    {
+      "codec": "zlib:6",
+      "files": [
+        {
+          "path": "empty.bin",
+          "input_bytes": 0,
+          "output_bytes": 8,
+          "ratio": null,
+          "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_sha256": "aca503def43dc086a5aaa5c3d6f86bcbbc2aa6a80007ddea4a81bce2b376fceb",
+          "decoded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 3100,
+              "decode_ns": 600
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2300,
+              "decode_ns": 400
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2200,
+              "decode_ns": 400
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2000,
+              "decode_ns": 400
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2100,
+              "decode_ns": 500
+            }
+          ],
+          "encode": {
+            "median_ns": 2200,
+            "p95_ns": 3100,
+            "cv": 0.1679220743964829
+          },
+          "decode": {
+            "median_ns": 400,
+            "p95_ns": 600,
+            "cv": 0.17391304347826086
+          }
+        },
+        {
+          "path": "events.jsonl",
+          "input_bytes": 183632,
+          "output_bytes": 21121,
+          "ratio": 0.11501807963753594,
+          "input_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "output_sha256": "fb0e507fe102ef068dc9c9381b969308c81fb8b8b99a371452eea066a219d33a",
+          "decoded_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2406200,
+              "decode_ns": 260700
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2422600,
+              "decode_ns": 240300
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2425900,
+              "decode_ns": 261900
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2430000,
+              "decode_ns": 239400
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2401800,
+              "decode_ns": 261300
+            }
+          ],
+          "encode": {
+            "median_ns": 2422600,
+            "p95_ns": 2430000,
+            "cv": 0.004631790841775007
+          },
+          "decode": {
+            "median_ns": 260700,
+            "p95_ns": 261900,
+            "cv": 0.04162318518672579
+          }
+        },
+        {
+          "path": "noise.bin",
+          "input_bytes": 128000,
+          "output_bytes": 128046,
+          "ratio": 1.000359375,
+          "input_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "output_sha256": "07d6f5ff8cf7f0fe702b3aed1e03860240f1b20091247fc1eb819e6988d1af56",
+          "decoded_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2374600,
+              "decode_ns": 118600
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2381500,
+              "decode_ns": 89100
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2406700,
+              "decode_ns": 84000
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2437500,
+              "decode_ns": 130300
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2403500,
+              "decode_ns": 144300
+            }
+          ],
+          "encode": {
+            "median_ns": 2403500,
+            "p95_ns": 2437500,
+            "cv": 0.009216460199307459
+          },
+          "decode": {
+            "median_ns": 118600,
+            "p95_ns": 144300,
+            "cv": 0.20601527038467593
+          }
+        },
+        {
+          "path": "prose.txt",
+          "input_bytes": 331880,
+          "output_bytes": 35644,
+          "ratio": 0.1074002651560805,
+          "input_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "output_sha256": "9efcb48b7b004eb8a638a4a649bab6bcb31ec6582f2c64129207c1b0353b0c06",
+          "decoded_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 6822700,
+              "decode_ns": 450100
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 6767600,
+              "decode_ns": 500800
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 6853700,
+              "decode_ns": 462700
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 6907700,
+              "decode_ns": 463400
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 6937100,
+              "decode_ns": 449600
+            }
+          ],
+          "encode": {
+            "median_ns": 6853700,
+            "p95_ns": 6937100,
+            "cv": 0.008788822944808759
+          },
+          "decode": {
+            "median_ns": 462700,
+            "p95_ns": 500800,
+            "cv": 0.040183927097471886
+          }
+        },
+        {
+          "path": "repeated.txt",
+          "input_bytes": 72000,
+          "output_bytes": 269,
+          "ratio": 0.003736111111111111,
+          "input_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "output_sha256": "a56602c3b8bec64d16bd638a917ce88f5c2e10cda798340ae389d6cec1e338ed",
+          "decoded_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 245300,
+              "decode_ns": 95700
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 246200,
+              "decode_ns": 71600
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 238800,
+              "decode_ns": 79200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 239300,
+              "decode_ns": 72300
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 235600,
+              "decode_ns": 78100
+            }
+          ],
+          "encode": {
+            "median_ns": 239300,
+            "p95_ns": 246200,
+            "cv": 0.01684306428003248
+          },
+          "decode": {
+            "median_ns": 78100,
+            "p95_ns": 95700,
+            "cv": 0.10963095724844489
+          }
+        },
+        {
+          "path": "service.log",
+          "input_bytes": 107597,
+          "output_bytes": 13269,
+          "ratio": 0.12332128219188267,
+          "input_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "output_sha256": "8b71a726bdba7ba2529fea32a892bb05df3a4c3197f41ccdc9cbab804e3e9555",
+          "decoded_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 1162500,
+              "decode_ns": 175000
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 1173500,
+              "decode_ns": 148100
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 1142700,
+              "decode_ns": 164500
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 1153200,
+              "decode_ns": 141900
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 1166900,
+              "decode_ns": 170100
+            }
+          ],
+          "encode": {
+            "median_ns": 1162500,
+            "p95_ns": 1173500,
+            "cv": 0.009297505787638624
+          },
+          "decode": {
+            "median_ns": 164500,
+            "p95_ns": 175000,
+            "cv": 0.07990546468838189
+          }
+        },
+        {
+          "path": "unicode.txt",
+          "input_bytes": 128000,
+          "output_bytes": 470,
+          "ratio": 0.003671875,
+          "input_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "output_sha256": "116b007f390a38e2bab3125e8b279f0bb6f40a750c5f3e3948d80325a34fad67",
+          "decoded_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 385900,
+              "decode_ns": 89300
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 382100,
+              "decode_ns": 99100
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 422700,
+              "decode_ns": 95200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 373700,
+              "decode_ns": 100500
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 421800,
+              "decode_ns": 95700
+            }
+          ],
+          "encode": {
+            "median_ns": 385900,
+            "p95_ns": 422700,
+            "cv": 0.05236313250527166
+          },
+          "decode": {
+            "median_ns": 95700,
+            "p95_ns": 100500,
+            "cv": 0.04048719486982269
+          }
+        }
+      ],
+      "aggregate": {
+        "input_bytes": 951109,
+        "output_bytes": 198827,
+        "ratio": 0.20904754344665016,
+        "verified": true,
+        "samples": [
+          {
+            "repeat": 0,
+            "encode_ns": 13400300,
+            "decode_ns": 1190000
+          },
+          {
+            "repeat": 1,
+            "encode_ns": 13375800,
+            "decode_ns": 1149400
+          },
+          {
+            "repeat": 2,
+            "encode_ns": 13492700,
+            "decode_ns": 1147900
+          },
+          {
+            "repeat": 3,
+            "encode_ns": 13543400,
+            "decode_ns": 1148200
+          },
+          {
+            "repeat": 4,
+            "encode_ns": 13568800,
+            "decode_ns": 1199600
+          }
+        ],
+        "encode": {
+          "median_ns": 13492700,
+          "p95_ns": 13568800,
+          "cv": 0.00567110099532196
+        },
+        "decode": {
+          "median_ns": 1149400,
+          "p95_ns": 1199600,
+          "cv": 0.019614087818011935
+        },
+        "pareto_size_encode": true,
+        "pareto_size_decode": true
+      }
+    },
+    {
+      "codec": "bz2:9",
+      "files": [
+        {
+          "path": "empty.bin",
+          "input_bytes": 0,
+          "output_bytes": 14,
+          "ratio": null,
+          "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_sha256": "d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058",
+          "decoded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 32300,
+              "decode_ns": 17700
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 30000,
+              "decode_ns": 17200
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 29500,
+              "decode_ns": 16500
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 28100,
+              "decode_ns": 16900
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 30100,
+              "decode_ns": 16100
+            }
+          ],
+          "encode": {
+            "median_ns": 30000,
+            "p95_ns": 32300,
+            "cv": 0.045117131508503015
+          },
+          "decode": {
+            "median_ns": 16900,
+            "p95_ns": 17700,
+            "cv": 0.03274946673242951
+          }
+        },
+        {
+          "path": "events.jsonl",
+          "input_bytes": 183632,
+          "output_bytes": 13299,
+          "ratio": 0.07242201794894136,
+          "input_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "output_sha256": "9f4e2f947b909a91fe0685e9c8414099c9bd928badad6d0826a0b7134560cce3",
+          "decoded_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 10342300,
+              "decode_ns": 1507800
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 10421000,
+              "decode_ns": 1534800
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 10433700,
+              "decode_ns": 1538300
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 10398700,
+              "decode_ns": 1601200
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 10401800,
+              "decode_ns": 1566800
+            }
+          ],
+          "encode": {
+            "median_ns": 10401800,
+            "p95_ns": 10433700,
+            "cv": 0.003013202002942706
+          },
+          "decode": {
+            "median_ns": 1538300,
+            "p95_ns": 1601200,
+            "cv": 0.020510939657294662
+          }
+        },
+        {
+          "path": "noise.bin",
+          "input_bytes": 128000,
+          "output_bytes": 128965,
+          "ratio": 1.0075390625,
+          "input_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "output_sha256": "d90a220eaa146fb077588b290ec907e5053d0817cbad9c19714f072209aa4c5d",
+          "decoded_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 8966900,
+              "decode_ns": 3597500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 9008800,
+              "decode_ns": 3672200
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 9012400,
+              "decode_ns": 3617600
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 9021900,
+              "decode_ns": 3637100
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 8995300,
+              "decode_ns": 3652900
+            }
+          ],
+          "encode": {
+            "median_ns": 9008800,
+            "p95_ns": 9021900,
+            "cv": 0.0021212986259641973
+          },
+          "decode": {
+            "median_ns": 3637100,
+            "p95_ns": 3672200,
+            "cv": 0.007190406746216016
+          }
+        },
+        {
+          "path": "prose.txt",
+          "input_bytes": 331880,
+          "output_bytes": 22132,
+          "ratio": 0.06668675424852356,
+          "input_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "output_sha256": "0cd44994f1dc275b7e956f28759bdd8841aaae552b0536e0ac0e5c33036f3918",
+          "decoded_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 20629500,
+              "decode_ns": 3764100
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 20637900,
+              "decode_ns": 3535200
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 20494900,
+              "decode_ns": 3612200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 20574000,
+              "decode_ns": 3593600
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 20847700,
+              "decode_ns": 3581600
+            }
+          ],
+          "encode": {
+            "median_ns": 20629500,
+            "p95_ns": 20847700,
+            "cv": 0.005676427394910364
+          },
+          "decode": {
+            "median_ns": 3593600,
+            "p95_ns": 3764100,
+            "cv": 0.021467907782459984
+          }
+        },
+        {
+          "path": "repeated.txt",
+          "input_bytes": 72000,
+          "output_bytes": 144,
+          "ratio": 0.002,
+          "input_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "output_sha256": "14b3a60b3909be8efb6f3514c10e2509d41c7667c847dc3bb69c8b6c803db3d3",
+          "decoded_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 5145700,
+              "decode_ns": 363200
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 5145300,
+              "decode_ns": 304700
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 5088500,
+              "decode_ns": 307900
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 5126800,
+              "decode_ns": 322800
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 5123800,
+              "decode_ns": 316000
+            }
+          ],
+          "encode": {
+            "median_ns": 5126800,
+            "p95_ns": 5145700,
+            "cv": 0.004066262415336949
+          },
+          "decode": {
+            "median_ns": 316000,
+            "p95_ns": 363200,
+            "cv": 0.06536911106178063
+          }
+        },
+        {
+          "path": "service.log",
+          "input_bytes": 107597,
+          "output_bytes": 9969,
+          "ratio": 0.09265128209894329,
+          "input_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "output_sha256": "5a38a852e69b31cdaabdb97706cf3ca03e320f66554a3e9788929d2873a14653",
+          "decoded_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 6900400,
+              "decode_ns": 978700
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 6991600,
+              "decode_ns": 1031500
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 6944700,
+              "decode_ns": 1019600
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 7003700,
+              "decode_ns": 979400
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 6917100,
+              "decode_ns": 969600
+            }
+          ],
+          "encode": {
+            "median_ns": 6944700,
+            "p95_ns": 7003700,
+            "cv": 0.005816272625007778
+          },
+          "decode": {
+            "median_ns": 979400,
+            "p95_ns": 1031500,
+            "cv": 0.024960336448440413
+          }
+        },
+        {
+          "path": "unicode.txt",
+          "input_bytes": 128000,
+          "output_bytes": 232,
+          "ratio": 0.0018125,
+          "input_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "output_sha256": "6356aca1853277c555fcaafa38daf7e2d1428f13625143ae184f1bd187a9558b",
+          "decoded_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 9109700,
+              "decode_ns": 505300
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 9348500,
+              "decode_ns": 513400
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 9155800,
+              "decode_ns": 562500
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 9185100,
+              "decode_ns": 507200
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 9218400,
+              "decode_ns": 484300
+            }
+          ],
+          "encode": {
+            "median_ns": 9185100,
+            "p95_ns": 9348500,
+            "cv": 0.008781433507500283
+          },
+          "decode": {
+            "median_ns": 507200,
+            "p95_ns": 562500,
+            "cv": 0.050344641202049525
+          }
+        }
+      ],
+      "aggregate": {
+        "input_bytes": 951109,
+        "output_bytes": 174755,
+        "ratio": 0.18373814147484674,
+        "verified": true,
+        "samples": [
+          {
+            "repeat": 0,
+            "encode_ns": 61126800,
+            "decode_ns": 10734300
+          },
+          {
+            "repeat": 1,
+            "encode_ns": 61583100,
+            "decode_ns": 10609000
+          },
+          {
+            "repeat": 2,
+            "encode_ns": 61159500,
+            "decode_ns": 10674600
+          },
+          {
+            "repeat": 3,
+            "encode_ns": 61338300,
+            "decode_ns": 10658200
+          },
+          {
+            "repeat": 4,
+            "encode_ns": 61534200,
+            "decode_ns": 10587300
+          }
+        ],
+        "encode": {
+          "median_ns": 61338300,
+          "p95_ns": 61583100,
+          "cv": 0.0030451347367430807
+        },
+        "decode": {
+          "median_ns": 10658200,
+          "p95_ns": 10734300,
+          "cv": 0.004851571322305678
+        },
+        "pareto_size_encode": true,
+        "pareto_size_decode": true
+      }
+    },
+    {
+      "codec": "lzma:6",
+      "files": [
+        {
+          "path": "empty.bin",
+          "input_bytes": 0,
+          "output_bytes": 32,
+          "ratio": null,
+          "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_sha256": "0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275",
+          "decoded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2281900,
+              "decode_ns": 7300
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2097900,
+              "decode_ns": 5200
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2313900,
+              "decode_ns": 5200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 2154800,
+              "decode_ns": 6700
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2153700,
+              "decode_ns": 4600
+            }
+          ],
+          "encode": {
+            "median_ns": 2154800,
+            "p95_ns": 2313900,
+            "cv": 0.037635309447808636
+          },
+          "decode": {
+            "median_ns": 5200,
+            "p95_ns": 7300,
+            "cv": 0.17616606585441105
+          }
+        },
+        {
+          "path": "events.jsonl",
+          "input_bytes": 183632,
+          "output_bytes": 16812,
+          "ratio": 0.09155267055850833,
+          "input_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "output_sha256": "476ef296da4567249b563fee2af34adc8897fe133eacd3581cbc6238e05cb862",
+          "decoded_sha256": "95308d485001a71b478c94861196ab57342411ac73a623501e2c2e2e757caa30",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 38019800,
+              "decode_ns": 962700
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 38062800,
+              "decode_ns": 941600
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 37598600,
+              "decode_ns": 931700
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 37513600,
+              "decode_ns": 961200
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 38050300,
+              "decode_ns": 987100
+            }
+          ],
+          "encode": {
+            "median_ns": 38019800,
+            "p95_ns": 38062800,
+            "cv": 0.006369520431144415
+          },
+          "decode": {
+            "median_ns": 961200,
+            "p95_ns": 987100,
+            "cv": 0.020011627926359882
+          }
+        },
+        {
+          "path": "noise.bin",
+          "input_bytes": 128000,
+          "output_bytes": 128068,
+          "ratio": 1.00053125,
+          "input_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "output_sha256": "b789bf3e43bca5006c11075f557feece8503f1e1b4db0f834a265098f1d5583c",
+          "decoded_sha256": "c817d6d1609c7469385d61307c498fc2bc350f3a510370c20f5f7f088a3926cf",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 14996300,
+              "decode_ns": 268800
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 14944100,
+              "decode_ns": 288600
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 14488600,
+              "decode_ns": 282500
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 14471400,
+              "decode_ns": 256300
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 14807200,
+              "decode_ns": 300300
+            }
+          ],
+          "encode": {
+            "median_ns": 14807200,
+            "p95_ns": 14996300,
+            "cv": 0.015083281282469949
+          },
+          "decode": {
+            "median_ns": 282500,
+            "p95_ns": 300300,
+            "cv": 0.054932403780641535
+          }
+        },
+        {
+          "path": "prose.txt",
+          "input_bytes": 331880,
+          "output_bytes": 29304,
+          "ratio": 0.08829697481017235,
+          "input_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "output_sha256": "2d7b49e9f79acbd817027c879d9494733861e3e88b5bb97c43281776f5125fe5",
+          "decoded_sha256": "62e8e86647c4d56139575cc96fa3892b84198bc5f7628cb7aa32421cb941f35e",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 70147200,
+              "decode_ns": 1310200
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 71493200,
+              "decode_ns": 1330700
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 69415400,
+              "decode_ns": 1269500
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 69810100,
+              "decode_ns": 1333900
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 69409300,
+              "decode_ns": 1279300
+            }
+          ],
+          "encode": {
+            "median_ns": 69810100,
+            "p95_ns": 71493200,
+            "cv": 0.010988414733591589
+          },
+          "decode": {
+            "median_ns": 1310200,
+            "p95_ns": 1333900,
+            "cv": 0.02011276315682093
+          }
+        },
+        {
+          "path": "repeated.txt",
+          "input_bytes": 72000,
+          "output_bytes": 180,
+          "ratio": 0.0025,
+          "input_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "output_sha256": "d1b409c9009de0694c46a75e7c1f0fc24effcb3a17064c13c0ab9ad16cc8352f",
+          "decoded_sha256": "6ae4613e75e5bc5b4e37902993a3449fabd9e148667e9ccb6591130419c27553",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 2741400,
+              "decode_ns": 190200
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 2790100,
+              "decode_ns": 174900
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 2703700,
+              "decode_ns": 216600
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 3183900,
+              "decode_ns": 196000
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 2936300,
+              "decode_ns": 192000
+            }
+          ],
+          "encode": {
+            "median_ns": 2790100,
+            "p95_ns": 3183900,
+            "cv": 0.061027407864080986
+          },
+          "decode": {
+            "median_ns": 192000,
+            "p95_ns": 216600,
+            "cv": 0.06910092172436794
+          }
+        },
+        {
+          "path": "service.log",
+          "input_bytes": 107597,
+          "output_bytes": 9108,
+          "ratio": 0.08464920025651272,
+          "input_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "output_sha256": "a1b13b54865ded30ddce2bdab30d05d72024bb776e9a5df0cd033590cc7ca277",
+          "decoded_sha256": "eec833c087c9fd710f832e8f790b59839b4badfd37c3b0ee0e37457f51a6877b",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 18440300,
+              "decode_ns": 638500
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 18611600,
+              "decode_ns": 630200
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 18433200,
+              "decode_ns": 663100
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 18534700,
+              "decode_ns": 614500
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 18370300,
+              "decode_ns": 662000
+            }
+          ],
+          "encode": {
+            "median_ns": 18440300,
+            "p95_ns": 18611600,
+            "cv": 0.004597924530308798
+          },
+          "decode": {
+            "median_ns": 638500,
+            "p95_ns": 663100,
+            "cv": 0.02917582756252293
+          }
+        },
+        {
+          "path": "unicode.txt",
+          "input_bytes": 128000,
+          "output_bytes": 212,
+          "ratio": 0.00165625,
+          "input_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "output_sha256": "56fa8796fd1a8b955e5bf686bd0082996cc34caad2f255056cf85e9fdd5d95d6",
+          "decoded_sha256": "ecec0a8cf941d1dda3b1efe87bdfc1b30d3b49e5bbd74d1fc4410892cc3a1fe8",
+          "verified": true,
+          "samples": [
+            {
+              "repeat": 0,
+              "encode_ns": 3382600,
+              "decode_ns": 338400
+            },
+            {
+              "repeat": 1,
+              "encode_ns": 3490600,
+              "decode_ns": 297900
+            },
+            {
+              "repeat": 2,
+              "encode_ns": 3346900,
+              "decode_ns": 274200
+            },
+            {
+              "repeat": 3,
+              "encode_ns": 3507700,
+              "decode_ns": 293000
+            },
+            {
+              "repeat": 4,
+              "encode_ns": 3461400,
+              "decode_ns": 374700
+            }
+          ],
+          "encode": {
+            "median_ns": 3461400,
+            "p95_ns": 3507700,
+            "cv": 0.018184395256920824
+          },
+          "decode": {
+            "median_ns": 297900,
+            "p95_ns": 374700,
+            "cv": 0.11467407015683581
+          }
+        }
+      ],
+      "aggregate": {
+        "input_bytes": 951109,
+        "output_bytes": 183716,
+        "ratio": 0.19315977453688274,
+        "verified": true,
+        "samples": [
+          {
+            "repeat": 0,
+            "encode_ns": 150009500,
+            "decode_ns": 3716100
+          },
+          {
+            "repeat": 1,
+            "encode_ns": 151490300,
+            "decode_ns": 3669100
+          },
+          {
+            "repeat": 2,
+            "encode_ns": 148300300,
+            "decode_ns": 3642800
+          },
+          {
+            "repeat": 3,
+            "encode_ns": 149176200,
+            "decode_ns": 3661600
+          },
+          {
+            "repeat": 4,
+            "encode_ns": 149188500,
+            "decode_ns": 3800000
+          }
+        ],
+        "encode": {
+          "median_ns": 149188500,
+          "p95_ns": 151490300,
+          "cv": 0.007181464313702055
+        },
+        "decode": {
+          "median_ns": 3669100,
+          "p95_ns": 3800000,
+          "cv": 0.015268104840298329
+        },
+        "pareto_size_encode": false,
+        "pareto_size_decode": true
+      }
+    }
+  ]
+}
