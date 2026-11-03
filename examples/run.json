@@ -23,7 +23,7 @@
       },
       {
         "path": "src/compression_observatory/corpus.py",
-        "sha256": "1896d93b744693c92e60141051c49360f88fb1beb2c86d24f841504fce8e820c"
+        "sha256": "d44e7d1b7c59c0331916961af8614b3c1eb06c892e65a611ff3a9ac792c27a42"
       },
       {
         "path": "src/compression_observatory/report.py",
@@ -31,7 +31,7 @@
       }
     ]
   },
-  "created_utc": "2026-11-03T12:26:43.382291+00:00",
+  "created_utc": "2026-11-03T12:38:36.978655+00:00",
   "environment": {
     "python": "3.13.15",
     "implementation": "CPython",
@@ -118,39 +118,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 4700,
-              "decode_ns": 5900
+              "encode_ns": 36100,
+              "decode_ns": 10200
             },
             {
               "repeat": 1,
-              "encode_ns": 3000,
-              "decode_ns": 3300
+              "encode_ns": 32200,
+              "decode_ns": 6300
             },
             {
               "repeat": 2,
-              "encode_ns": 2500,
-              "decode_ns": 2300
+              "encode_ns": 31500,
+              "decode_ns": 5000
             },
             {
               "repeat": 3,
-              "encode_ns": 2500,
-              "decode_ns": 2000
+              "encode_ns": 29600,
+              "decode_ns": 4400
             },
             {
               "repeat": 4,
-              "encode_ns": 2300,
-              "decode_ns": 1700
+              "encode_ns": 31000,
+              "decode_ns": 4500
             }
           ],
           "encode": {
-            "median_ns": 2500,
-            "p95_ns": 4700,
-            "cv": 0.2936362072739366
+            "median_ns": 31500,
+            "p95_ns": 36100,
+            "cv": 0.06804942093456265
           },
           "decode": {
-            "median_ns": 2300,
-            "p95_ns": 5900,
-            "cv": 0.5025902435469547
+            "median_ns": 5000,
+            "p95_ns": 10200,
+            "cv": 0.356631138149855
           }
         },
         {
@@ -165,39 +165,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 735400,
-              "decode_ns": 297100
+              "encode_ns": 846000,
+              "decode_ns": 308500
             },
             {
               "repeat": 1,
-              "encode_ns": 791500,
-              "decode_ns": 270300
+              "encode_ns": 854000,
+              "decode_ns": 315000
             },
             {
               "repeat": 2,
-              "encode_ns": 762600,
-              "decode_ns": 286400
+              "encode_ns": 850000,
+              "decode_ns": 295300
             },
             {
               "repeat": 3,
-              "encode_ns": 792900,
-              "decode_ns": 270200
+              "encode_ns": 848800,
+              "decode_ns": 323200
             },
             {
               "repeat": 4,
-              "encode_ns": 758700,
-              "decode_ns": 264100
+              "encode_ns": 853500,
+              "decode_ns": 308100
             }
           ],
           "encode": {
-            "median_ns": 762600,
-            "p95_ns": 792900,
-            "cv": 0.028222979765669075
+            "median_ns": 850000,
+            "p95_ns": 854000,
+            "cv": 0.0035130495869816454
           },
           "decode": {
-            "median_ns": 270300,
-            "p95_ns": 297100,
-            "cv": 0.0440566593554211
+            "median_ns": 308500,
+            "p95_ns": 323200,
+            "cv": 0.029604878328642288
           }
         },
         {
@@ -212,39 +212,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2464700,
-              "decode_ns": 157500
+              "encode_ns": 2478100,
+              "decode_ns": 100300
             },
             {
               "repeat": 1,
-              "encode_ns": 2392400,
-              "decode_ns": 153700
+              "encode_ns": 2416300,
+              "decode_ns": 129800
             },
             {
               "repeat": 2,
-              "encode_ns": 2467200,
-              "decode_ns": 180600
+              "encode_ns": 2431400,
+              "decode_ns": 129800
             },
             {
               "repeat": 3,
-              "encode_ns": 2475500,
-              "decode_ns": 159800
+              "encode_ns": 2413800,
+              "decode_ns": 179600
             },
             {
               "repeat": 4,
-              "encode_ns": 2401500,
-              "decode_ns": 156200
+              "encode_ns": 2463900,
+              "decode_ns": 146600
             }
           ],
           "encode": {
-            "median_ns": 2464700,
-            "p95_ns": 2475500,
-            "cv": 0.014612822321684309
+            "median_ns": 2431400,
+            "p95_ns": 2478100,
+            "cv": 0.010593359380700143
           },
           "decode": {
-            "median_ns": 157500,
-            "p95_ns": 180600,
-            "cv": 0.06017741465105922
+            "median_ns": 129800,
+            "p95_ns": 179600,
+            "cv": 0.18883795764827702
           }
         },
         {
@@ -259,39 +259,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 1821400,
-              "decode_ns": 662000
+              "encode_ns": 1846200,
+              "decode_ns": 600400
             },
             {
               "repeat": 1,
               "encode_ns": 1874300,
-              "decode_ns": 694900
+              "decode_ns": 636700
             },
             {
               "repeat": 2,
-              "encode_ns": 1915900,
-              "decode_ns": 659900
+              "encode_ns": 1873200,
+              "decode_ns": 612200
             },
             {
               "repeat": 3,
-              "encode_ns": 1883900,
-              "decode_ns": 688500
+              "encode_ns": 1853400,
+              "decode_ns": 640000
             },
             {
               "repeat": 4,
-              "encode_ns": 1863600,
-              "decode_ns": 656700
+              "encode_ns": 1885400,
+              "decode_ns": 612600
             }
           ],
           "encode": {
-            "median_ns": 1874300,
-            "p95_ns": 1915900,
-            "cv": 0.016387950224720223
+            "median_ns": 1873200,
+            "p95_ns": 1885400,
+            "cv": 0.007751498507739337
           },
           "decode": {
-            "median_ns": 662000,
-            "p95_ns": 694900,
-            "cv": 0.02376150178931255
+            "median_ns": 612600,
+            "p95_ns": 640000,
+            "cv": 0.024740961988685115
           }
         },
         {
@@ -306,39 +306,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 116700,
-              "decode_ns": 88600
+              "encode_ns": 119600,
+              "decode_ns": 47200
             },
             {
               "repeat": 1,
-              "encode_ns": 120900,
-              "decode_ns": 79100
+              "encode_ns": 83400,
+              "decode_ns": 43500
             },
             {
               "repeat": 2,
-              "encode_ns": 117400,
-              "decode_ns": 87200
+              "encode_ns": 75600,
+              "decode_ns": 42400
             },
             {
               "repeat": 3,
-              "encode_ns": 120500,
-              "decode_ns": 78900
+              "encode_ns": 75500,
+              "decode_ns": 42500
             },
             {
               "repeat": 4,
-              "encode_ns": 116500,
-              "decode_ns": 87900
+              "encode_ns": 75400,
+              "decode_ns": 42100
             }
           ],
           "encode": {
-            "median_ns": 117400,
-            "p95_ns": 120900,
-            "cv": 0.016096120607529185
+            "median_ns": 75600,
+            "p95_ns": 119600,
+            "cv": 0.19936732563691797
           },
           "decode": {
-            "median_ns": 87200,
-            "p95_ns": 88600,
-            "cv": 0.05196783295695336
+            "median_ns": 42500,
+            "p95_ns": 47200,
+            "cv": 0.04339802965156337
           }
         },
         {
@@ -353,39 +353,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 412700,
-              "decode_ns": 201200
+              "encode_ns": 458300,
+              "decode_ns": 219300
             },
             {
               "repeat": 1,
-              "encode_ns": 387800,
-              "decode_ns": 134800
+              "encode_ns": 460200,
+              "decode_ns": 217500
             },
             {
               "repeat": 2,
-              "encode_ns": 408400,
-              "decode_ns": 137200
+              "encode_ns": 469600,
+              "decode_ns": 221500
             },
             {
               "repeat": 3,
-              "encode_ns": 378100,
-              "decode_ns": 129800
+              "encode_ns": 474500,
+              "decode_ns": 214800
             },
             {
               "repeat": 4,
-              "encode_ns": 396400,
-              "decode_ns": 135900
+              "encode_ns": 468400,
+              "decode_ns": 216500
             }
           ],
           "encode": {
-            "median_ns": 396400,
-            "p95_ns": 412700,
-            "cv": 0.03224709743298497
+            "median_ns": 468400,
+            "p95_ns": 474500,
+            "cv": 0.013001615152888665
           },
           "decode": {
-            "median_ns": 135900,
-            "p95_ns": 201200,
-            "cv": 0.18153558904456135
+            "median_ns": 217500,
+            "p95_ns": 221500,
+            "cv": 0.010593762136936913
           }
         },
         {
@@ -400,39 +400,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 160400,
-              "decode_ns": 125500
+              "encode_ns": 185300,
+              "decode_ns": 145400
             },
             {
               "repeat": 1,
-              "encode_ns": 169800,
-              "decode_ns": 107700
+              "encode_ns": 197200,
+              "decode_ns": 125800
             },
             {
               "repeat": 2,
-              "encode_ns": 201300,
-              "decode_ns": 90200
+              "encode_ns": 199300,
+              "decode_ns": 145600
             },
             {
               "repeat": 3,
-              "encode_ns": 174200,
-              "decode_ns": 102200
+              "encode_ns": 196100,
+              "decode_ns": 125800
             },
             {
               "repeat": 4,
-              "encode_ns": 200100,
-              "decode_ns": 90400
+              "encode_ns": 194800,
+              "decode_ns": 153800
             }
           ],
           "encode": {
-            "median_ns": 174200,
-            "p95_ns": 201300,
-            "cv": 0.09146569089363302
+            "median_ns": 196100,
+            "p95_ns": 199300,
+            "cv": 0.024930552537836395
           },
           "decode": {
-            "median_ns": 102200,
-            "p95_ns": 125500,
-            "cv": 0.12644364956229528
+            "median_ns": 145400,
+            "p95_ns": 153800,
+            "cv": 0.08196581718255357
           }
         }
       ],
@@ -444,39 +444,39 @@
         "samples": [
           {
             "repeat": 0,
-            "encode_ns": 5716000,
-            "decode_ns": 1537800
+            "encode_ns": 5969600,
+            "decode_ns": 1431300
           },
           {
             "repeat": 1,
-            "encode_ns": 5739700,
-            "decode_ns": 1443800
+            "encode_ns": 5917600,
+            "decode_ns": 1474600
           },
           {
             "repeat": 2,
-            "encode_ns": 5875300,
-            "decode_ns": 1443800
+            "encode_ns": 5930600,
+            "decode_ns": 1451800
           },
           {
             "repeat": 3,
-            "encode_ns": 5827600,
-            "decode_ns": 1431400
+            "encode_ns": 5891700,
+            "decode_ns": 1530300
           },
           {
             "repeat": 4,
-            "encode_ns": 5739100,
-            "decode_ns": 1392900
+            "encode_ns": 5972400,
+            "decode_ns": 1484200
           }
         ],
         "encode": {
-          "median_ns": 5739700,
-          "p95_ns": 5875300,
-          "cv": 0.010592609162998786
+          "median_ns": 5930600,
+          "p95_ns": 5972400,
+          "cv": 0.005210291450893924
         },
         "decode": {
-          "median_ns": 1443800,
-          "p95_ns": 1537800,
-          "cv": 0.032920492771196415
+          "median_ns": 1474600,
+          "p95_ns": 1530300,
+          "cv": 0.02267591074847328
         },
         "pareto_size_encode": true,
         "pareto_size_decode": false
@@ -497,39 +497,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 3200,
-              "decode_ns": 2300
+              "encode_ns": 35600,
+              "decode_ns": 4400
             },
             {
               "repeat": 1,
-              "encode_ns": 2500,
-              "decode_ns": 1800
+              "encode_ns": 32700,
+              "decode_ns": 4600
             },
             {
               "repeat": 2,
-              "encode_ns": 2400,
-              "decode_ns": 1700
+              "encode_ns": 33500,
+              "decode_ns": 4000
             },
             {
               "repeat": 3,
-              "encode_ns": 2200,
-              "decode_ns": 1600
+              "encode_ns": 34300,
+              "decode_ns": 4100
             },
             {
               "repeat": 4,
-              "encode_ns": 2300,
-              "decode_ns": 1600
+              "encode_ns": 34800,
+              "decode_ns": 4100
             }
           ],
           "encode": {
-            "median_ns": 2400,
-            "p95_ns": 3200,
-            "cv": 0.14063527894182024
+            "median_ns": 34300,
+            "p95_ns": 35600,
+            "cv": 0.02945515026015967
           },
           "decode": {
-            "median_ns": 1700,
-            "p95_ns": 2300,
-            "cv": 0.14487116456005886
+            "median_ns": 4100,
+            "p95_ns": 4600,
+            "cv": 0.05294798188831049
           }
         },
         {
@@ -544,39 +544,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2339400,
-              "decode_ns": 251500
+              "encode_ns": 2450200,
+              "decode_ns": 271900
             },
             {
               "repeat": 1,
-              "encode_ns": 2546500,
-              "decode_ns": 270000
+              "encode_ns": 2450500,
+              "decode_ns": 265700
             },
             {
               "repeat": 2,
-              "encode_ns": 2449700,
-              "decode_ns": 233300
+              "encode_ns": 2448400,
+              "decode_ns": 269100
             },
             {
               "repeat": 3,
-              "encode_ns": 2465800,
-              "decode_ns": 247600
+              "encode_ns": 2443200,
+              "decode_ns": 265400
             },
             {
               "repeat": 4,
-              "encode_ns": 2491200,
-              "decode_ns": 245800
+              "encode_ns": 2434400,
+              "decode_ns": 276300
             }
           ],
           "encode": {
-            "median_ns": 2465800,
-            "p95_ns": 2546500,
-            "cv": 0.027664196798847303
+            "median_ns": 2448400,
+            "p95_ns": 2450500,
+            "cv": 0.0024798964441096584
           },
           "decode": {
-            "median_ns": 247600,
-            "p95_ns": 270000,
-            "cv": 0.047528470496030185
+            "median_ns": 269100,
+            "p95_ns": 276300,
+            "cv": 0.015130495913742619
           }
         },
         {
@@ -591,39 +591,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2634400,
-              "decode_ns": 265000
+              "encode_ns": 2406900,
+              "decode_ns": 84900
             },
             {
               "repeat": 1,
-              "encode_ns": 2432300,
-              "decode_ns": 155400
+              "encode_ns": 2405500,
+              "decode_ns": 107300
             },
             {
               "repeat": 2,
-              "encode_ns": 2497200,
-              "decode_ns": 161200
+              "encode_ns": 2462100,
+              "decode_ns": 110000
             },
             {
               "repeat": 3,
-              "encode_ns": 2461800,
-              "decode_ns": 153800
+              "encode_ns": 2439200,
+              "decode_ns": 151000
             },
             {
               "repeat": 4,
-              "encode_ns": 2494000,
-              "decode_ns": 157300
+              "encode_ns": 2444700,
+              "decode_ns": 136600
             }
           ],
           "encode": {
-            "median_ns": 2494000,
-            "p95_ns": 2634400,
-            "cv": 0.027710743444955672
+            "median_ns": 2439200,
+            "p95_ns": 2462100,
+            "cv": 0.009104797848744732
           },
           "decode": {
-            "median_ns": 157300,
-            "p95_ns": 265000,
-            "cv": 0.2425255556124296
+            "median_ns": 110000,
+            "p95_ns": 151000,
+            "cv": 0.19732808654459058
           }
         },
         {
@@ -638,39 +638,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 6731000,
-              "decode_ns": 494000
+              "encode_ns": 6690900,
+              "decode_ns": 444900
             },
             {
               "repeat": 1,
-              "encode_ns": 6773300,
-              "decode_ns": 486400
+              "encode_ns": 6644500,
+              "decode_ns": 450700
             },
             {
               "repeat": 2,
-              "encode_ns": 6754500,
-              "decode_ns": 456200
+              "encode_ns": 6725900,
+              "decode_ns": 505900
             },
             {
               "repeat": 3,
-              "encode_ns": 6760600,
-              "decode_ns": 463100
+              "encode_ns": 6745700,
+              "decode_ns": 467300
             },
             {
               "repeat": 4,
-              "encode_ns": 6775500,
-              "decode_ns": 462600
+              "encode_ns": 6769700,
+              "decode_ns": 452000
             }
           ],
           "encode": {
-            "median_ns": 6760600,
-            "p95_ns": 6775500,
-            "cv": 0.00237049963969094
+            "median_ns": 6725900,
+            "p95_ns": 6769700,
+            "cv": 0.006526347184232588
           },
           "decode": {
-            "median_ns": 463100,
-            "p95_ns": 494000,
-            "cv": 0.031500987798957984
+            "median_ns": 452000,
+            "p95_ns": 505900,
+            "cv": 0.04771049203905001
           }
         },
         {
@@ -685,39 +685,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 248700,
-              "decode_ns": 94500
+              "encode_ns": 250900,
+              "decode_ns": 44600
             },
             {
               "repeat": 1,
-              "encode_ns": 255200,
-              "decode_ns": 80600
+              "encode_ns": 220900,
+              "decode_ns": 42400
             },
             {
               "repeat": 2,
-              "encode_ns": 249800,
-              "decode_ns": 93200
+              "encode_ns": 198900,
+              "decode_ns": 42000
             },
             {
               "repeat": 3,
-              "encode_ns": 252000,
-              "decode_ns": 83300
+              "encode_ns": 198700,
+              "decode_ns": 41800
             },
             {
               "repeat": 4,
-              "encode_ns": 254700,
-              "decode_ns": 91800
+              "encode_ns": 206800,
+              "decode_ns": 41600
             }
           ],
           "encode": {
-            "median_ns": 252000,
-            "p95_ns": 255200,
-            "cv": 0.010226539698004206
+            "median_ns": 206800,
+            "p95_ns": 250900,
+            "cv": 0.0909347586392939
           },
           "decode": {
-            "median_ns": 91800,
-            "p95_ns": 94500,
-            "cv": 0.06344331546142924
+            "median_ns": 42000,
+            "p95_ns": 44600,
+            "cv": 0.02571845627824419
           }
         },
         {
@@ -732,39 +732,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 1146000,
-              "decode_ns": 200900
+              "encode_ns": 1173100,
+              "decode_ns": 202900
             },
             {
               "repeat": 1,
-              "encode_ns": 1164700,
-              "decode_ns": 133800
+              "encode_ns": 1180400,
+              "decode_ns": 191800
             },
             {
               "repeat": 2,
-              "encode_ns": 1145700,
-              "decode_ns": 141700
+              "encode_ns": 1185500,
+              "decode_ns": 198100
             },
             {
               "repeat": 3,
-              "encode_ns": 1135300,
-              "decode_ns": 132300
+              "encode_ns": 1182500,
+              "decode_ns": 193000
             },
             {
               "repeat": 4,
-              "encode_ns": 1145800,
-              "decode_ns": 140300
+              "encode_ns": 1182000,
+              "decode_ns": 198700
             }
           ],
           "encode": {
-            "median_ns": 1145800,
-            "p95_ns": 1164700,
-            "cv": 0.00829545408661514
+            "median_ns": 1182000,
+            "p95_ns": 1185500,
+            "cv": 0.0035088894823909517
           },
           "decode": {
-            "median_ns": 140300,
-            "p95_ns": 200900,
-            "cv": 0.17225861628918
+            "median_ns": 198100,
+            "p95_ns": 202900,
+            "cv": 0.020554704260891888
           }
         },
         {
@@ -779,39 +779,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 408000,
-              "decode_ns": 136500
+              "encode_ns": 412200,
+              "decode_ns": 144800
             },
             {
               "repeat": 1,
-              "encode_ns": 387200,
-              "decode_ns": 101100
+              "encode_ns": 437700,
+              "decode_ns": 116900
             },
             {
               "repeat": 2,
-              "encode_ns": 615600,
-              "decode_ns": 97200
+              "encode_ns": 429500,
+              "decode_ns": 142000
             },
             {
               "repeat": 3,
-              "encode_ns": 395000,
-              "decode_ns": 97100
+              "encode_ns": 436200,
+              "decode_ns": 128800
             },
             {
               "repeat": 4,
-              "encode_ns": 431200,
-              "decode_ns": 89000
+              "encode_ns": 436700,
+              "decode_ns": 144500
             }
           ],
           "encode": {
-            "median_ns": 408000,
-            "p95_ns": 615600,
-            "cv": 0.1909069191577506
+            "median_ns": 436200,
+            "p95_ns": 437700,
+            "cv": 0.022249683743009733
           },
           "decode": {
-            "median_ns": 97200,
-            "p95_ns": 136500,
-            "cv": 0.15966008935939954
+            "median_ns": 142000,
+            "p95_ns": 144800,
+            "cv": 0.0809407647302919
           }
         }
       ],
@@ -823,39 +823,39 @@
         "samples": [
           {
             "repeat": 0,
-            "encode_ns": 13510700,
-            "decode_ns": 1444700
+            "encode_ns": 13419800,
+            "decode_ns": 1198400
           },
           {
             "repeat": 1,
-            "encode_ns": 13561700,
-            "decode_ns": 1229100
+            "encode_ns": 13372200,
+            "decode_ns": 1179400
           },
           {
             "repeat": 2,
-            "encode_ns": 13714900,
-            "decode_ns": 1184500
+            "encode_ns": 13483800,
+            "decode_ns": 1271100
           },
           {
             "repeat": 3,
-            "encode_ns": 13472700,
-            "decode_ns": 1178800
+            "encode_ns": 13479800,
+            "decode_ns": 1251400
           },
           {
             "repeat": 4,
-            "encode_ns": 13594700,
-            "decode_ns": 1188400
+            "encode_ns": 13509100,
+            "decode_ns": 1253800
           }
         ],
         "encode": {
-          "median_ns": 13561700,
-          "p95_ns": 13714900,
-          "cv": 0.006134567629708099
+          "median_ns": 13479800,
+          "p95_ns": 13509100,
+          "cv": 0.003708466886871821
         },
         "decode": {
-          "median_ns": 1188400,
-          "p95_ns": 1444700,
-          "cv": 0.08141492196978986
+          "median_ns": 1251400,
+          "p95_ns": 1271100,
+          "cv": 0.02876904246447615
         },
         "pareto_size_encode": false,
         "pareto_size_decode": false
@@ -876,39 +876,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 3100,
-              "decode_ns": 600
+              "encode_ns": 32600,
+              "decode_ns": 2900
             },
             {
               "repeat": 1,
-              "encode_ns": 2300,
-              "decode_ns": 400
+              "encode_ns": 31100,
+              "decode_ns": 2800
             },
             {
               "repeat": 2,
-              "encode_ns": 2200,
-              "decode_ns": 400
+              "encode_ns": 31600,
+              "decode_ns": 2700
             },
             {
               "repeat": 3,
-              "encode_ns": 2000,
-              "decode_ns": 400
+              "encode_ns": 31500,
+              "decode_ns": 2700
             },
             {
               "repeat": 4,
-              "encode_ns": 2100,
-              "decode_ns": 500
+              "encode_ns": 31900,
+              "decode_ns": 2900
             }
           ],
           "encode": {
-            "median_ns": 2200,
-            "p95_ns": 3100,
-            "cv": 0.1679220743964829
+            "median_ns": 31600,
+            "p95_ns": 32600,
+            "cv": 0.015765590426208953
           },
           "decode": {
-            "median_ns": 400,
-            "p95_ns": 600,
-            "cv": 0.17391304347826086
+            "median_ns": 2800,
+            "p95_ns": 2900,
+            "cv": 0.031943828249996996
           }
         },
         {
@@ -923,39 +923,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2406200,
-              "decode_ns": 260700
+              "encode_ns": 2382000,
+              "decode_ns": 207300
             },
             {
               "repeat": 1,
-              "encode_ns": 2422600,
-              "decode_ns": 240300
+              "encode_ns": 2452700,
+              "decode_ns": 229900
             },
             {
               "repeat": 2,
-              "encode_ns": 2425900,
-              "decode_ns": 261900
+              "encode_ns": 2432700,
+              "decode_ns": 271800
             },
             {
               "repeat": 3,
-              "encode_ns": 2430000,
-              "decode_ns": 239400
+              "encode_ns": 2415400,
+              "decode_ns": 259700
             },
             {
               "repeat": 4,
-              "encode_ns": 2401800,
-              "decode_ns": 261300
+              "encode_ns": 2388500,
+              "decode_ns": 257800
             }
           ],
           "encode": {
-            "median_ns": 2422600,
-            "p95_ns": 2430000,
-            "cv": 0.004631790841775007
+            "median_ns": 2415400,
+            "p95_ns": 2452700,
+            "cv": 0.010995191872245845
           },
           "decode": {
-            "median_ns": 260700,
-            "p95_ns": 261900,
-            "cv": 0.04162318518672579
+            "median_ns": 257800,
+            "p95_ns": 271800,
+            "cv": 0.09555388745282681
           }
         },
         {
@@ -970,39 +970,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2374600,
-              "decode_ns": 118600
+              "encode_ns": 2305300,
+              "decode_ns": 72000
             },
             {
               "repeat": 1,
-              "encode_ns": 2381500,
-              "decode_ns": 89100
+              "encode_ns": 2347300,
+              "decode_ns": 98200
             },
             {
               "repeat": 2,
-              "encode_ns": 2406700,
-              "decode_ns": 84000
+              "encode_ns": 2400200,
+              "decode_ns": 120100
             },
             {
               "repeat": 3,
-              "encode_ns": 2437500,
-              "decode_ns": 130300
+              "encode_ns": 2365800,
+              "decode_ns": 122800
             },
             {
               "repeat": 4,
-              "encode_ns": 2403500,
-              "decode_ns": 144300
+              "encode_ns": 2382500,
+              "decode_ns": 102200
             }
           ],
           "encode": {
-            "median_ns": 2403500,
-            "p95_ns": 2437500,
-            "cv": 0.009216460199307459
+            "median_ns": 2365800,
+            "p95_ns": 2400200,
+            "cv": 0.013806120374210164
           },
           "decode": {
-            "median_ns": 118600,
-            "p95_ns": 144300,
-            "cv": 0.20601527038467593
+            "median_ns": 102200,
+            "p95_ns": 122800,
+            "cv": 0.17728320703076975
           }
         },
         {
@@ -1017,39 +1017,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 6822700,
-              "decode_ns": 450100
+              "encode_ns": 7138100,
+              "decode_ns": 432000
             },
             {
               "repeat": 1,
-              "encode_ns": 6767600,
-              "decode_ns": 500800
+              "encode_ns": 6657200,
+              "decode_ns": 454700
             },
             {
               "repeat": 2,
-              "encode_ns": 6853700,
-              "decode_ns": 462700
+              "encode_ns": 6674000,
+              "decode_ns": 460900
             },
             {
               "repeat": 3,
-              "encode_ns": 6907700,
-              "decode_ns": 463400
+              "encode_ns": 6628300,
+              "decode_ns": 425500
             },
             {
               "repeat": 4,
-              "encode_ns": 6937100,
-              "decode_ns": 449600
+              "encode_ns": 6734300,
+              "decode_ns": 438000
             }
           ],
           "encode": {
-            "median_ns": 6853700,
-            "p95_ns": 6937100,
-            "cv": 0.008788822944808759
+            "median_ns": 6674000,
+            "p95_ns": 7138100,
+            "cv": 0.027941623779714795
           },
           "decode": {
-            "median_ns": 462700,
-            "p95_ns": 500800,
-            "cv": 0.040183927097471886
+            "median_ns": 438000,
+            "p95_ns": 460900,
+            "cv": 0.030448257105858082
           }
         },
         {
@@ -1064,39 +1064,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 245300,
-              "decode_ns": 95700
+              "encode_ns": 245400,
+              "decode_ns": 38900
             },
             {
               "repeat": 1,
-              "encode_ns": 246200,
-              "decode_ns": 71600
+              "encode_ns": 217700,
+              "decode_ns": 36800
             },
             {
               "repeat": 2,
-              "encode_ns": 238800,
-              "decode_ns": 79200
+              "encode_ns": 203000,
+              "decode_ns": 36800
             },
             {
               "repeat": 3,
-              "encode_ns": 239300,
-              "decode_ns": 72300
+              "encode_ns": 202200,
+              "decode_ns": 36700
             },
             {
               "repeat": 4,
-              "encode_ns": 235600,
-              "decode_ns": 78100
+              "encode_ns": 202400,
+              "decode_ns": 36500
             }
           ],
           "encode": {
-            "median_ns": 239300,
-            "p95_ns": 246200,
-            "cv": 0.01684306428003248
+            "median_ns": 203000,
+            "p95_ns": 245400,
+            "cv": 0.07798362362632856
           },
           "decode": {
-            "median_ns": 78100,
-            "p95_ns": 95700,
-            "cv": 0.10963095724844489
+            "median_ns": 36800,
+            "p95_ns": 38900,
+            "cv": 0.023877005145283105
           }
         },
         {
@@ -1111,39 +1111,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 1162500,
-              "decode_ns": 175000
+              "encode_ns": 1114500,
+              "decode_ns": 167600
             },
             {
               "repeat": 1,
-              "encode_ns": 1173500,
-              "decode_ns": 148100
+              "encode_ns": 1129600,
+              "decode_ns": 147900
             },
             {
               "repeat": 2,
-              "encode_ns": 1142700,
-              "decode_ns": 164500
+              "encode_ns": 1154000,
+              "decode_ns": 132400
             },
             {
               "repeat": 3,
-              "encode_ns": 1153200,
-              "decode_ns": 141900
+              "encode_ns": 1130200,
+              "decode_ns": 144000
             },
             {
               "repeat": 4,
-              "encode_ns": 1166900,
-              "decode_ns": 170100
+              "encode_ns": 1144900,
+              "decode_ns": 136000
             }
           ],
           "encode": {
-            "median_ns": 1162500,
-            "p95_ns": 1173500,
-            "cv": 0.009297505787638624
+            "median_ns": 1130200,
+            "p95_ns": 1154000,
+            "cv": 0.01202507779631774
           },
           "decode": {
-            "median_ns": 164500,
-            "p95_ns": 175000,
-            "cv": 0.07990546468838189
+            "median_ns": 144000,
+            "p95_ns": 167600,
+            "cv": 0.08458997946285429
           }
         },
         {
@@ -1158,39 +1158,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 385900,
-              "decode_ns": 89300
+              "encode_ns": 424700,
+              "decode_ns": 132200
             },
             {
               "repeat": 1,
-              "encode_ns": 382100,
-              "decode_ns": 99100
+              "encode_ns": 423600,
+              "decode_ns": 110600
             },
             {
               "repeat": 2,
-              "encode_ns": 422700,
-              "decode_ns": 95200
+              "encode_ns": 425400,
+              "decode_ns": 135900
             },
             {
               "repeat": 3,
-              "encode_ns": 373700,
-              "decode_ns": 100500
+              "encode_ns": 422600,
+              "decode_ns": 107600
             },
             {
               "repeat": 4,
-              "encode_ns": 421800,
-              "decode_ns": 95700
+              "encode_ns": 422700,
+              "decode_ns": 136100
             }
           ],
           "encode": {
-            "median_ns": 385900,
-            "p95_ns": 422700,
-            "cv": 0.05236313250527166
+            "median_ns": 423600,
+            "p95_ns": 425400,
+            "cv": 0.0025977081537560897
           },
           "decode": {
-            "median_ns": 95700,
-            "p95_ns": 100500,
-            "cv": 0.04048719486982269
+            "median_ns": 132200,
+            "p95_ns": 136100,
+            "cv": 0.10178237283454031
           }
         }
       ],
@@ -1202,39 +1202,39 @@
         "samples": [
           {
             "repeat": 0,
-            "encode_ns": 13400300,
-            "decode_ns": 1190000
+            "encode_ns": 13642600,
+            "decode_ns": 1052900
           },
           {
             "repeat": 1,
-            "encode_ns": 13375800,
-            "decode_ns": 1149400
+            "encode_ns": 13259200,
+            "decode_ns": 1080900
           },
           {
             "repeat": 2,
-            "encode_ns": 13492700,
-            "decode_ns": 1147900
+            "encode_ns": 13320900,
+            "decode_ns": 1160600
           },
           {
             "repeat": 3,
-            "encode_ns": 13543400,
-            "decode_ns": 1148200
+            "encode_ns": 13196000,
+            "decode_ns": 1099000
           },
           {
             "repeat": 4,
-            "encode_ns": 13568800,
-            "decode_ns": 1199600
+            "encode_ns": 13307200,
+            "decode_ns": 1109500
           }
         ],
         "encode": {
-          "median_ns": 13492700,
-          "p95_ns": 13568800,
-          "cv": 0.00567110099532196
+          "median_ns": 13307200,
+          "p95_ns": 13642600,
+          "cv": 0.011615303399107433
         },
         "decode": {
-          "median_ns": 1149400,
-          "p95_ns": 1199600,
-          "cv": 0.019614087818011935
+          "median_ns": 1099000,
+          "p95_ns": 1160600,
+          "cv": 0.03236788031792824
         },
         "pareto_size_encode": true,
         "pareto_size_decode": true
@@ -1255,39 +1255,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 32300,
-              "decode_ns": 17700
+              "encode_ns": 36500,
+              "decode_ns": 19300
             },
             {
               "repeat": 1,
-              "encode_ns": 30000,
-              "decode_ns": 17200
+              "encode_ns": 32500,
+              "decode_ns": 17800
             },
             {
               "repeat": 2,
-              "encode_ns": 29500,
-              "decode_ns": 16500
+              "encode_ns": 32400,
+              "decode_ns": 19200
             },
             {
               "repeat": 3,
-              "encode_ns": 28100,
-              "decode_ns": 16900
+              "encode_ns": 33500,
+              "decode_ns": 19300
             },
             {
               "repeat": 4,
-              "encode_ns": 30100,
-              "decode_ns": 16100
+              "encode_ns": 31700,
+              "decode_ns": 17600
             }
           ],
           "encode": {
-            "median_ns": 30000,
-            "p95_ns": 32300,
-            "cv": 0.045117131508503015
+            "median_ns": 32500,
+            "p95_ns": 36500,
+            "cv": 0.050733605303998654
           },
           "decode": {
-            "median_ns": 16900,
-            "p95_ns": 17700,
-            "cv": 0.03274946673242951
+            "median_ns": 19200,
+            "p95_ns": 19300,
+            "cv": 0.041361234479391384
           }
         },
         {
@@ -1302,39 +1302,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 10342300,
-              "decode_ns": 1507800
+              "encode_ns": 10544400,
+              "decode_ns": 1555200
             },
             {
               "repeat": 1,
-              "encode_ns": 10421000,
-              "decode_ns": 1534800
+              "encode_ns": 10348900,
+              "decode_ns": 1670700
             },
             {
               "repeat": 2,
-              "encode_ns": 10433700,
-              "decode_ns": 1538300
+              "encode_ns": 10525000,
+              "decode_ns": 1521500
             },
             {
               "repeat": 3,
-              "encode_ns": 10398700,
-              "decode_ns": 1601200
+              "encode_ns": 10459200,
+              "decode_ns": 1569000
             },
             {
               "repeat": 4,
-              "encode_ns": 10401800,
-              "decode_ns": 1566800
+              "encode_ns": 10551500,
+              "decode_ns": 1547800
             }
           ],
           "encode": {
-            "median_ns": 10401800,
-            "p95_ns": 10433700,
-            "cv": 0.003013202002942706
+            "median_ns": 10525000,
+            "p95_ns": 10551500,
+            "cv": 0.007229837732902578
           },
           "decode": {
-            "median_ns": 1538300,
-            "p95_ns": 1601200,
-            "cv": 0.020510939657294662
+            "median_ns": 1555200,
+            "p95_ns": 1670700,
+            "cv": 0.03262463791528642
           }
         },
         {
@@ -1349,39 +1349,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 8966900,
-              "decode_ns": 3597500
+              "encode_ns": 9182400,
+              "decode_ns": 3723500
             },
             {
               "repeat": 1,
-              "encode_ns": 9008800,
-              "decode_ns": 3672200
+              "encode_ns": 9190300,
+              "decode_ns": 3655000
             },
             {
               "repeat": 2,
-              "encode_ns": 9012400,
-              "decode_ns": 3617600
+              "encode_ns": 9206500,
+              "decode_ns": 3622400
             },
             {
               "repeat": 3,
-              "encode_ns": 9021900,
-              "decode_ns": 3637100
+              "encode_ns": 9107900,
+              "decode_ns": 3593800
             },
             {
               "repeat": 4,
-              "encode_ns": 8995300,
-              "decode_ns": 3652900
+              "encode_ns": 8977800,
+              "decode_ns": 3710100
             }
           ],
           "encode": {
-            "median_ns": 9008800,
-            "p95_ns": 9021900,
-            "cv": 0.0021212986259641973
+            "median_ns": 9182400,
+            "p95_ns": 9206500,
+            "cv": 0.009270525488961432
           },
           "decode": {
-            "median_ns": 3637100,
-            "p95_ns": 3672200,
-            "cv": 0.007190406746216016
+            "median_ns": 3655000,
+            "p95_ns": 3723500,
+            "cv": 0.013580291114457823
           }
         },
         {
@@ -1396,39 +1396,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 20629500,
-              "decode_ns": 3764100
+              "encode_ns": 20382200,
+              "decode_ns": 3565000
             },
             {
               "repeat": 1,
-              "encode_ns": 20637900,
-              "decode_ns": 3535200
+              "encode_ns": 20447400,
+              "decode_ns": 3668600
             },
             {
               "repeat": 2,
-              "encode_ns": 20494900,
-              "decode_ns": 3612200
+              "encode_ns": 20448200,
+              "decode_ns": 3585200
             },
             {
               "repeat": 3,
-              "encode_ns": 20574000,
-              "decode_ns": 3593600
+              "encode_ns": 20526700,
+              "decode_ns": 3683500
             },
             {
               "repeat": 4,
-              "encode_ns": 20847700,
-              "decode_ns": 3581600
+              "encode_ns": 20561800,
+              "decode_ns": 3528800
             }
           ],
           "encode": {
-            "median_ns": 20629500,
-            "p95_ns": 20847700,
-            "cv": 0.005676427394910364
+            "median_ns": 20448200,
+            "p95_ns": 20561800,
+            "cv": 0.0031110213996151026
           },
           "decode": {
-            "median_ns": 3593600,
-            "p95_ns": 3764100,
-            "cv": 0.021467907782459984
+            "median_ns": 3585200,
+            "p95_ns": 3683500,
+            "cv": 0.01663711030634382
           }
         },
         {
@@ -1443,39 +1443,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 5145700,
-              "decode_ns": 363200
+              "encode_ns": 5119000,
+              "decode_ns": 302900
             },
             {
               "repeat": 1,
-              "encode_ns": 5145300,
-              "decode_ns": 304700
+              "encode_ns": 5110400,
+              "decode_ns": 291000
             },
             {
               "repeat": 2,
-              "encode_ns": 5088500,
-              "decode_ns": 307900
+              "encode_ns": 5057800,
+              "decode_ns": 311100
             },
             {
               "repeat": 3,
-              "encode_ns": 5126800,
-              "decode_ns": 322800
+              "encode_ns": 5134200,
+              "decode_ns": 320200
             },
             {
               "repeat": 4,
-              "encode_ns": 5123800,
-              "decode_ns": 316000
+              "encode_ns": 5030800,
+              "decode_ns": 308700
             }
           ],
           "encode": {
-            "median_ns": 5126800,
-            "p95_ns": 5145700,
-            "cv": 0.004066262415336949
+            "median_ns": 5110400,
+            "p95_ns": 5134200,
+            "cv": 0.007734767861395908
           },
           "decode": {
-            "median_ns": 316000,
-            "p95_ns": 363200,
-            "cv": 0.06536911106178063
+            "median_ns": 308700,
+            "p95_ns": 320200,
+            "cv": 0.03148600083166349
           }
         },
         {
@@ -1490,39 +1490,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 6900400,
-              "decode_ns": 978700
+              "encode_ns": 6856800,
+              "decode_ns": 972100
             },
             {
               "repeat": 1,
-              "encode_ns": 6991600,
-              "decode_ns": 1031500
+              "encode_ns": 6833200,
+              "decode_ns": 952300
             },
             {
               "repeat": 2,
-              "encode_ns": 6944700,
-              "decode_ns": 1019600
+              "encode_ns": 6836400,
+              "decode_ns": 974500
             },
             {
               "repeat": 3,
-              "encode_ns": 7003700,
-              "decode_ns": 979400
+              "encode_ns": 6802100,
+              "decode_ns": 962500
             },
             {
               "repeat": 4,
-              "encode_ns": 6917100,
-              "decode_ns": 969600
+              "encode_ns": 6705700,
+              "decode_ns": 958600
             }
           ],
           "encode": {
-            "median_ns": 6944700,
-            "p95_ns": 7003700,
-            "cv": 0.005816272625007778
+            "median_ns": 6833200,
+            "p95_ns": 6856800,
+            "cv": 0.007861158441837449
           },
           "decode": {
-            "median_ns": 979400,
-            "p95_ns": 1031500,
-            "cv": 0.024960336448440413
+            "median_ns": 962500,
+            "p95_ns": 974500,
+            "cv": 0.00860633328669391
           }
         },
         {
@@ -1537,39 +1537,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 9109700,
-              "decode_ns": 505300
+              "encode_ns": 8862000,
+              "decode_ns": 522400
             },
             {
               "repeat": 1,
-              "encode_ns": 9348500,
-              "decode_ns": 513400
+              "encode_ns": 8803300,
+              "decode_ns": 554700
             },
             {
               "repeat": 2,
-              "encode_ns": 9155800,
-              "decode_ns": 562500
+              "encode_ns": 8904200,
+              "decode_ns": 487000
             },
             {
               "repeat": 3,
-              "encode_ns": 9185100,
-              "decode_ns": 507200
+              "encode_ns": 8898600,
+              "decode_ns": 564600
             },
             {
               "repeat": 4,
-              "encode_ns": 9218400,
-              "decode_ns": 484300
+              "encode_ns": 9079400,
+              "decode_ns": 541800
             }
           ],
           "encode": {
-            "median_ns": 9185100,
-            "p95_ns": 9348500,
-            "cv": 0.008781433507500283
+            "median_ns": 8898600,
+            "p95_ns": 9079400,
+            "cv": 0.010353786359922986
           },
           "decode": {
-            "median_ns": 507200,
-            "p95_ns": 562500,
-            "cv": 0.050344641202049525
+            "median_ns": 541800,
+            "p95_ns": 564600,
+            "cv": 0.05140637867956211
           }
         }
       ],
@@ -1581,39 +1581,39 @@
         "samples": [
           {
             "repeat": 0,
-            "encode_ns": 61126800,
-            "decode_ns": 10734300
+            "encode_ns": 60983300,
+            "decode_ns": 10660400
           },
           {
             "repeat": 1,
-            "encode_ns": 61583100,
-            "decode_ns": 10609000
+            "encode_ns": 60766000,
+            "decode_ns": 10810100
           },
           {
             "repeat": 2,
-            "encode_ns": 61159500,
-            "decode_ns": 10674600
+            "encode_ns": 61010500,
+            "decode_ns": 10520900
           },
           {
             "repeat": 3,
-            "encode_ns": 61338300,
-            "decode_ns": 10658200
+            "encode_ns": 60962200,
+            "decode_ns": 10712900
           },
           {
             "repeat": 4,
-            "encode_ns": 61534200,
-            "decode_ns": 10587300
+            "encode_ns": 60938700,
+            "decode_ns": 10613400
           }
         ],
         "encode": {
-          "median_ns": 61338300,
-          "p95_ns": 61583100,
-          "cv": 0.0030451347367430807
+          "median_ns": 60962200,
+          "p95_ns": 61010500,
+          "cv": 0.0014176283934733854
         },
         "decode": {
-          "median_ns": 10658200,
-          "p95_ns": 10734300,
-          "cv": 0.004851571322305678
+          "median_ns": 10660400,
+          "p95_ns": 10810100,
+          "cv": 0.009071370580568028
         },
         "pareto_size_encode": true,
         "pareto_size_decode": true
@@ -1634,39 +1634,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2281900,
-              "decode_ns": 7300
+              "encode_ns": 2112200,
+              "decode_ns": 9000
             },
             {
               "repeat": 1,
-              "encode_ns": 2097900,
-              "decode_ns": 5200
+              "encode_ns": 2250400,
+              "decode_ns": 6200
             },
             {
               "repeat": 2,
-              "encode_ns": 2313900,
-              "decode_ns": 5200
+              "encode_ns": 2169600,
+              "decode_ns": 6000
             },
             {
               "repeat": 3,
-              "encode_ns": 2154800,
-              "decode_ns": 6700
+              "encode_ns": 2358100,
+              "decode_ns": 6200
             },
             {
               "repeat": 4,
-              "encode_ns": 2153700,
-              "decode_ns": 4600
+              "encode_ns": 2088700,
+              "decode_ns": 4800
             }
           ],
           "encode": {
-            "median_ns": 2154800,
-            "p95_ns": 2313900,
-            "cv": 0.037635309447808636
+            "median_ns": 2169600,
+            "p95_ns": 2358100,
+            "cv": 0.04483848513358978
           },
           "decode": {
-            "median_ns": 5200,
-            "p95_ns": 7300,
-            "cv": 0.17616606585441105
+            "median_ns": 6200,
+            "p95_ns": 9000,
+            "cv": 0.21462301295864591
           }
         },
         {
@@ -1681,39 +1681,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 38019800,
-              "decode_ns": 962700
+              "encode_ns": 37303900,
+              "decode_ns": 927000
             },
             {
               "repeat": 1,
-              "encode_ns": 38062800,
-              "decode_ns": 941600
+              "encode_ns": 38103600,
+              "decode_ns": 961100
             },
             {
               "repeat": 2,
-              "encode_ns": 37598600,
-              "decode_ns": 931700
+              "encode_ns": 37667700,
+              "decode_ns": 958100
             },
             {
               "repeat": 3,
-              "encode_ns": 37513600,
-              "decode_ns": 961200
+              "encode_ns": 37428000,
+              "decode_ns": 943700
             },
             {
               "repeat": 4,
-              "encode_ns": 38050300,
-              "decode_ns": 987100
+              "encode_ns": 38843100,
+              "decode_ns": 989200
             }
           ],
           "encode": {
-            "median_ns": 38019800,
-            "p95_ns": 38062800,
-            "cv": 0.006369520431144415
+            "median_ns": 37667700,
+            "p95_ns": 38843100,
+            "cv": 0.014741664209751489
           },
           "decode": {
-            "median_ns": 961200,
-            "p95_ns": 987100,
-            "cv": 0.020011627926359882
+            "median_ns": 958100,
+            "p95_ns": 989200,
+            "cv": 0.021567345055960935
           }
         },
         {
@@ -1728,39 +1728,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 14996300,
-              "decode_ns": 268800
+              "encode_ns": 14240700,
+              "decode_ns": 315700
             },
             {
               "repeat": 1,
-              "encode_ns": 14944100,
-              "decode_ns": 288600
+              "encode_ns": 14431400,
+              "decode_ns": 228100
             },
             {
               "repeat": 2,
-              "encode_ns": 14488600,
-              "decode_ns": 282500
+              "encode_ns": 14262100,
+              "decode_ns": 244600
             },
             {
               "repeat": 3,
-              "encode_ns": 14471400,
-              "decode_ns": 256300
+              "encode_ns": 14429400,
+              "decode_ns": 244700
             },
             {
               "repeat": 4,
-              "encode_ns": 14807200,
-              "decode_ns": 300300
+              "encode_ns": 13603100,
+              "decode_ns": 237400
             }
           ],
           "encode": {
-            "median_ns": 14807200,
-            "p95_ns": 14996300,
-            "cv": 0.015083281282469949
+            "median_ns": 14262100,
+            "p95_ns": 14431400,
+            "cv": 0.021549528778440095
           },
           "decode": {
-            "median_ns": 282500,
-            "p95_ns": 300300,
-            "cv": 0.054932403780641535
+            "median_ns": 244600,
+            "p95_ns": 315700,
+            "cv": 0.12355158642138055
           }
         },
         {
@@ -1775,39 +1775,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 70147200,
-              "decode_ns": 1310200
+              "encode_ns": 68649400,
+              "decode_ns": 1321500
             },
             {
               "repeat": 1,
-              "encode_ns": 71493200,
-              "decode_ns": 1330700
+              "encode_ns": 68724600,
+              "decode_ns": 1297200
             },
             {
               "repeat": 2,
-              "encode_ns": 69415400,
-              "decode_ns": 1269500
+              "encode_ns": 69654700,
+              "decode_ns": 1332900
             },
             {
               "repeat": 3,
-              "encode_ns": 69810100,
-              "decode_ns": 1333900
+              "encode_ns": 69447900,
+              "decode_ns": 1309200
             },
             {
               "repeat": 4,
-              "encode_ns": 69409300,
-              "decode_ns": 1279300
+              "encode_ns": 69281300,
+              "decode_ns": 1262400
             }
           ],
           "encode": {
-            "median_ns": 69810100,
-            "p95_ns": 71493200,
-            "cv": 0.010988414733591589
+            "median_ns": 69281300,
+            "p95_ns": 69654700,
+            "cv": 0.005756341402460138
           },
           "decode": {
-            "median_ns": 1310200,
-            "p95_ns": 1333900,
-            "cv": 0.02011276315682093
+            "median_ns": 1309200,
+            "p95_ns": 1332900,
+            "cv": 0.018596791928365667
           }
         },
         {
@@ -1822,39 +1822,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 2741400,
-              "decode_ns": 190200
+              "encode_ns": 2864100,
+              "decode_ns": 248500
             },
             {
               "repeat": 1,
-              "encode_ns": 2790100,
-              "decode_ns": 174900
+              "encode_ns": 2658200,
+              "decode_ns": 218900
             },
             {
               "repeat": 2,
-              "encode_ns": 2703700,
-              "decode_ns": 216600
+              "encode_ns": 2834500,
+              "decode_ns": 189100
             },
             {
               "repeat": 3,
-              "encode_ns": 3183900,
-              "decode_ns": 196000
+              "encode_ns": 2663100,
+              "decode_ns": 221100
             },
             {
               "repeat": 4,
-              "encode_ns": 2936300,
-              "decode_ns": 192000
+              "encode_ns": 2741200,
+              "decode_ns": 242200
             }
           ],
           "encode": {
-            "median_ns": 2790100,
-            "p95_ns": 3183900,
-            "cv": 0.061027407864080986
+            "median_ns": 2741200,
+            "p95_ns": 2864100,
+            "cv": 0.0309122339091243
           },
           "decode": {
-            "median_ns": 192000,
-            "p95_ns": 216600,
-            "cv": 0.06910092172436794
+            "median_ns": 221100,
+            "p95_ns": 248500,
+            "cv": 0.09331728747315686
           }
         },
         {
@@ -1869,39 +1869,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 18440300,
-              "decode_ns": 638500
+              "encode_ns": 18158100,
+              "decode_ns": 687400
             },
             {
               "repeat": 1,
-              "encode_ns": 18611600,
-              "decode_ns": 630200
+              "encode_ns": 18280900,
+              "decode_ns": 599100
             },
             {
               "repeat": 2,
-              "encode_ns": 18433200,
-              "decode_ns": 663100
+              "encode_ns": 18205500,
+              "decode_ns": 618300
             },
             {
               "repeat": 3,
-              "encode_ns": 18534700,
-              "decode_ns": 614500
+              "encode_ns": 18215400,
+              "decode_ns": 607300
             },
             {
               "repeat": 4,
-              "encode_ns": 18370300,
-              "decode_ns": 662000
+              "encode_ns": 18135700,
+              "decode_ns": 622900
             }
           ],
           "encode": {
-            "median_ns": 18440300,
-            "p95_ns": 18611600,
-            "cv": 0.004597924530308798
+            "median_ns": 18205500,
+            "p95_ns": 18280900,
+            "cv": 0.0027691082380501882
           },
           "decode": {
-            "median_ns": 638500,
-            "p95_ns": 663100,
-            "cv": 0.02917582756252293
+            "median_ns": 618300,
+            "p95_ns": 687400,
+            "cv": 0.049964617411357666
           }
         },
         {
@@ -1916,39 +1916,39 @@
           "samples": [
             {
               "repeat": 0,
-              "encode_ns": 3382600,
-              "decode_ns": 338400
+              "encode_ns": 3380300,
+              "decode_ns": 416300
             },
             {
               "repeat": 1,
-              "encode_ns": 3490600,
-              "decode_ns": 297900
+              "encode_ns": 3232700,
+              "decode_ns": 334100
             },
             {
               "repeat": 2,
-              "encode_ns": 3346900,
-              "decode_ns": 274200
+              "encode_ns": 3432300,
+              "decode_ns": 305700
             },
             {
               "repeat": 3,
-              "encode_ns": 3507700,
-              "decode_ns": 293000
+              "encode_ns": 3341800,
+              "decode_ns": 294600
             },
             {
               "repeat": 4,
-              "encode_ns": 3461400,
-              "decode_ns": 374700
+              "encode_ns": 3453900,
+              "decode_ns": 320900
             }
           ],
           "encode": {
-            "median_ns": 3461400,
-            "p95_ns": 3507700,
-            "cv": 0.018184395256920824
+            "median_ns": 3380300,
+            "p95_ns": 3453900,
+            "cv": 0.023247774618580293
           },
           "decode": {
-            "median_ns": 297900,
-            "p95_ns": 374700,
-            "cv": 0.11467407015683581
+            "median_ns": 320900,
+            "p95_ns": 416300,
+            "cv": 0.1289849945903074
           }
         }
       ],
@@ -1960,39 +1960,39 @@
         "samples": [
           {
             "repeat": 0,
-            "encode_ns": 150009500,
-            "decode_ns": 3716100
+            "encode_ns": 146708700,
+            "decode_ns": 3925400
           },
           {
             "repeat": 1,
-            "encode_ns": 151490300,
-            "decode_ns": 3669100
+            "encode_ns": 147681800,
+            "decode_ns": 3644700
           },
           {
             "repeat": 2,
-            "encode_ns": 148300300,
-            "decode_ns": 3642800
+            "encode_ns": 148226400,
+            "decode_ns": 3654700
           },
           {
             "repeat": 3,
-            "encode_ns": 149176200,
-            "decode_ns": 3661600
+            "encode_ns": 147883700,
+            "decode_ns": 3626800
           },
           {
             "repeat": 4,
-            "encode_ns": 149188500,
-            "decode_ns": 3800000
+            "encode_ns": 148147000,
+            "decode_ns": 3679800
           }
         ],
         "encode": {
-          "median_ns": 149188500,
-          "p95_ns": 151490300,
-          "cv": 0.007181464313702055
+          "median_ns": 147883700,
+          "p95_ns": 148226400,
+          "cv": 0.003694358304734502
         },
         "decode": {
-          "median_ns": 3669100,
-          "p95_ns": 3800000,
-          "cv": 0.015268104840298329
+          "median_ns": 3654700,
+          "p95_ns": 3925400,
+          "cv": 0.029919845067193133
         },
         "pareto_size_encode": false,
         "pareto_size_decode": true

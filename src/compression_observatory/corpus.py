@@ -19,11 +19,31 @@ def is_link(info: os.stat_result) -> bool:
     return stat.S_ISLNK(info.st_mode) or bool(getattr(info, "st_file_attributes", 0) & 0x400)
 
 
+def reject_link_components(path: Path, *, allow_missing: bool = False) -> None:
+    """Check metadata, not spelling: resolve also expands legitimate Windows 8.3 aliases.
+
+    Inspect existing prefixes before resolving anything. In particular, do not
+    normalize away a link followed by '..'. This remains a stable-snapshot
+    check, not a defense against concurrent hostile filesystem replacement.
+    """
+    absolute = path.absolute()
+    if ".." in absolute.parts:
+        raise ValueError("parent traversal ('..') is not allowed")
+    for component in (*reversed(absolute.parents), absolute):
+        try:
+            info = component.lstat()
+        except FileNotFoundError:
+            if allow_missing:
+                break  # descendants of a missing prefix cannot already exist
+            raise
+        if is_link(info):
+            raise ValueError("links/reparse points are not allowed in path components")
+
+
 def generate(destination: Path, *, seed: int = 1729, records: int = 2000) -> dict:
     if not 1 <= records <= 100_000:
         raise ValueError("records must be between 1 and 100000")
-    if destination.resolve() != destination.absolute():
-        raise ValueError("generation destination must not traverse links")
+    reject_link_components(destination, allow_missing=True)
     if destination.exists() and (is_link(destination.lstat()) or not destination.is_dir() or any(destination.iterdir())):
         raise ValueError("generation requires a new or empty directory")
     destination.mkdir(parents=True, exist_ok=True)
@@ -57,8 +77,9 @@ def read_directory(root: Path, *, max_files: int = 1000, max_file_bytes: int = 1
                    max_total_bytes: int = 67_108_864) -> tuple[list[tuple[str, bytes]], dict]:
     if min(max_files, max_file_bytes, max_total_bytes) < 1:
         raise ValueError("input bounds must be positive")
-    if is_link(root.lstat()) or not root.is_dir() or root.resolve() != root.absolute():
-        raise ValueError("input must be a directory without link traversal")
+    reject_link_components(root)
+    if not root.is_dir():
+        raise ValueError("input must be a directory")
     base = root.resolve()
     result, total, manifest_data = [], 0, None
 

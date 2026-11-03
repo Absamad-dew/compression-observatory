@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 from compression_observatory.benchmark import Adapter, adapter, aggregate, mark_pareto, measure, run, summary
 from compression_observatory.cli import main
-from compression_observatory.corpus import generate, read_directory, sha256
+from compression_observatory.corpus import generate, read_directory, reject_link_components, sha256
 from compression_observatory.report import render
 
 
@@ -60,6 +60,55 @@ class RoundTripTests(unittest.TestCase):
 
 
 class DirectoryTests(unittest.TestCase):
+    def test_resolved_spelling_is_not_used_to_detect_links(self):
+        # A resolve/absolute spelling mismatch can be a Windows 8.3 alias,
+        # not a symlink. The metadata check must not reject that mismatch.
+        with tempfile.TemporaryDirectory() as temp:
+            destination = Path(temp) / "corpus"
+            resolve = Path.resolve
+            def canonical_spelling(path, *args, **kwargs):
+                if path == destination:
+                    return path.parent / "different-canonical-spelling"
+                return resolve(path, *args, **kwargs)
+            with patch.object(Path, "resolve", canonical_spelling):
+                generate(destination, records=2)
+            self.assertEqual(len(read_directory(destination)[0]), 7)
+
+    def test_windows_temp_short_alias_generate_and_read(self):
+        # Runs on Windows 3.11 in CI, where TEMP can contain RUNNER~1.
+        # Other platforms still exercise the same temporary-directory workflow.
+        with tempfile.TemporaryDirectory(prefix="compression-observatory-long-name-") as temp:
+            alias = temp
+            if os.name == "nt":
+                import ctypes
+                buffer = ctypes.create_unicode_buffer(32768)
+                length = ctypes.windll.kernel32.GetShortPathNameW(temp, buffer, len(buffer))
+                self.assertGreater(length, 0)
+                self.assertLess(length, len(buffer))
+                alias = buffer.value
+            destination = Path(alias) / "corpus"
+            generate(destination, records=2)
+            self.assertEqual(len(read_directory(destination)[0]), 7)
+
+    def test_ancestor_reparse_metadata_and_parent_traversal_are_rejected(self):
+        from types import SimpleNamespace
+        import stat
+        with tempfile.TemporaryDirectory() as temp:
+            ancestor = Path(temp)
+            original = Path.lstat
+            def reparse_metadata(path):
+                if path == ancestor:
+                    return SimpleNamespace(st_mode=stat.S_IFDIR, st_file_attributes=0x400)
+                return original(path)
+            with patch.object(Path, "lstat", reparse_metadata):
+                with self.assertRaisesRegex(ValueError, "links/reparse"):
+                    generate(ancestor / "corpus", records=2)
+                with self.assertRaisesRegex(ValueError, "links/reparse"):
+                    read_directory(ancestor / "corpus")
+            with self.assertRaisesRegex(ValueError, "parent traversal"):
+                reject_link_components(ancestor / "missing" / ".." / "corpus", allow_missing=True)
+            self.assertFalse((ancestor / "corpus").exists())
+
     def test_deterministic_manifest_and_tamper_detection(self):
         with tempfile.TemporaryDirectory() as temp:
             a, b = Path(temp) / "a", Path(temp) / "b"
